@@ -1,0 +1,53 @@
+{
+  "name": "StyleChan",
+  "version": "1.10",
+  "description": "Customizable themes for 4chan X.",
+  "meta": {
+    "name": "StyleChan",
+    "repo": "https://github.com/3nly/StyleChan/",
+    "page": "https://github.com/3nly/StyleChan/",
+    "downloads": "https://github.com/3nly/StyleChan/releases/latest/download/",
+    "appid": "peblejlenbfconioafjbmipeogjdhcff",
+    "buildsPath": "builds/",
+    "mainBranch": "master",
+    "matches": [
+      "*://boards.4chan.org/*"
+    ],
+    "files": {
+      "metajs": "StyleChan.meta.js",
+      "userjs": "StyleChan.user.js"
+    },
+    "min": {
+      "chrome": "32",
+      "firefox": "26",
+      "greasemonkey": "1.14"
+    }
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-bump": "^0.8.0",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-compress": "^2.0.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^5.0.0",
+    "grunt-shell": "~1.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3nly/StyleChan.git"
+  },
+  "author": "seaweedchan",
+  "contributors": [
+    "3nly<3nly.github.com>"
+  ],
+  "namespace": "seaweedchan.github.com",
+  "license": "GPL-3.0",
+  "readmeFilename": "README.md",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "coffeescript": "^2.7.0"
+  }
+}
