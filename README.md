@@ -1,4 +1,4 @@
-![StyleChan](https://github.com/user-attachments/assets/874a641b-4486-4747-b8fb-0acbfe8c8cce) StyleChan
+![StyleChan](https://github.com/user-attachments/assets/ddbc2791-7915-4226-ba33-38c13d8be1d9) StyleChan
 ====
 
 StyleChan is a userscript functioning on top of 4chan X allowing you to customize the site with various themes.
@@ -15,6 +15,7 @@ Installing [4chan X](https://github.com/ccd0/4chan-x) is **REQUIRED** for StyleC
 - In 4chan X **enable**: Quick Reply, Persistent QR and Auto Hide QR.
 
 - Firefox: Requires the [Violentmonkey](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/) addon.
+- Chrom*: Requires the [Violetmonkey](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag/) extension.
 
 #### Troubleshooting
 
