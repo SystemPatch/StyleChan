@@ -6,6 +6,7 @@
 - Fix for Navigation Links
 - Fix for 4chan ads not showing/hiding correctly
 - Various small CSS fixes
+- Removed: Compatibility fixes with loadletter 4chan X (deprecated)
 
 ### v1.0.14
 *2016-12-01*
