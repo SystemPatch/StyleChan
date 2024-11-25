@@ -31,9 +31,6 @@ div.post {
   content: '';
   display: block;
 }
-:root.op-background .postContainer.opContainer {
-  margin-top: 5px;
-}
 .thread>.replyContainer,
 .threadContainer>.replyContainer {
   margin-bottom:" + $SS.conf["Margin Between Replies"] + "px !important;
