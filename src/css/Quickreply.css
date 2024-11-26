@@ -146,6 +146,9 @@
   transform: rotate(-90deg);
   right: 86%;
 }
+#qr > form {
+  overflow-y: hidden;
+}
 /* Fade QR */
 :root.fade-qr #qr form {
   display: block !important;
