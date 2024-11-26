@@ -219,8 +219,8 @@
                     name: "Consolas",
                     value: "Consolas"
                 }, {
-                    name: "Droid Sans",
-                    value: "Droid Sans"
+                    name: "Open Sans",
+                    value: "Open Sans"
                 }, {
                     name: "Segoe UI",
                     value: "Segoe UI"
@@ -249,15 +249,15 @@
             "Bitmap Font": [false, "Check this if you are using a bitmap font."],
             "Themes": [],
             "Hidden Themes": [],
-            "Selected Theme": 13,
-            "NSFW Theme": 12
+            "Selected Theme": 1,
+            "NSFW Theme": 0
         },
         MAX_FONT_SIZE = 18,
         MIN_FONT_SIZE = 10,
         NAME = "StyleChan",
         NAMESPACE = "StyleChan.",
         VERSION = "<%= version %>",
-        CHANGELOG = "https://github.com/3nly/StyleChan/blob/main/CHANGELOG.md",
+        CHANGELOG = "https://github.com/3nly/StyleChan/blob/<%= meta.mainBranch %>/CHANGELOG.md",
         inputImages = "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAgCAYAAAAv8DnQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAP9JREFUOMvV0CFLQ2EYxfHfrtdiURgbmCxOmFPBJgZZ0CQD0Q+goFkwabWIyWIWFgwmy7Qp7DPI3GD7ACZlYLNcy31ljG0aDHrSy3N43nOef6ZULBiifczEQ8wV7OAtGmBO4wgfOI2whsXUnMAJ8rhCJ8IxDpHDHpZwixqM5XPZBBtYxioauEgjRLjBI2bRxTneQ6EYCS4xiTu89DbONJrtP88hwnV64hm28YRqyPsFDkmSGKUYFubnsqignM7rqDWa7dcAqoLdnsXwrgZQ5QG/l8MVIxX1ZPar/lUyUOsv+aMzv+0Qw3OrM4VNrKfzB9yXioVu6LDVx+EA4/+Gwycw/Uz36O07WwAAAABJRU5ErkJggg==",
         themeInputs = [{
             dName: "Reply Background",
@@ -856,10 +856,12 @@
                 if (!$SS.conf["Show Top Ad"]) {
                     $(".topad.center").remove();
                     $(".aboveMidAd.center").remove();
+                    $("#danbo-s-t.danbo-slot").remove();
                 } else if (!$SS.conf["Show Middle Ad"]) {
                     $(".middlead.center").remove();
                 } else if (!$SS.conf["Show Bottom Ad"]) {
                     $(".bottomad.center").remove();
+                    $("#danbo-s-b.danbo-slot").remove();
                 }
 
                 // things that need to change after 4chan X loads.
@@ -1026,11 +1028,16 @@
                 $(document).bind("keydown", $SS.options.keydown);
 
                 var a = $("<span class='shortcut brackets-wrap'><a id='StyleChanLink' title='StyleChan Settings' class='fa fa-gears' href='javascript:;'>StyleChan</a></span>").bind("click", $SS.options.show);
-
+                /* When no icons */
+                var b = $("<span id='StyleChanLink'> [<a title='Stylechan Settings' href='javascript:;'>StyleChan</a>]&nbsp;</span>").bind("click", $SS.options.show);
+                /* When 4chan XT */
+                var c = $("<span class='shortcut brackets-wrap' data-index='840'><a class='settings-link' title='StyleChan Settings' href='javascript:;'><span class='icon--alt-text'>StyleChan Settings</span><svg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 512 512'><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3L344 320c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z' fill='currentColor'></path></svg></a></span>").bind("click", $SS.options.show);
                 $.asap(function() {
                     return $(".fourchan-x #shortcuts, .fourchan_x, .is_catalog").exists();
                 }, function() {
-                    $(".fourchan-x").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(a) : $("#boardNavDesktop").append(a);
+                    $(".fourchan-x:not(.fourchan-xt)").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(a) : $("#boardNavDesktop").append(b);
+                    $(".fourchan-xt").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(c) : $(".shortcut.brackets-wrap:last-of-type");
+                    
                 });
 
             },
@@ -1049,7 +1056,7 @@
                         "<p class='buttons-container'>" +
                         "<a class='options-button' title='Export your settings as JSON.' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' title='Reset StyleChan settings.' name=resetSettings>Reset</a>" +
                         "<span id=oneechan-version><span>StyleChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
-                        "<a href='https://github.com/3nly/StyleChan/blob/main/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
+                        "<a href='https://github.com/3nly/StyleChan/blob/<%= meta.mainBranch %>/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
                         "<a href='https://github.com/3nly/StyleChan/issues' id=issues-link target='_blank' title='Report an issue.'>Issues</a></p>",
                         key, val, des;
 
@@ -1593,6 +1600,78 @@
         /* THEMES */
         Themes: {
             defaults: [{
+                name: "Yotsuba",
+                authorName: "moot",
+                authorTrip: "!Εр8рui8Vw2",
+                "default": true,
+                bgImg: "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAWElEQVR4AaWSwQ3AIAwDbfbfpdt0nKrPUp3QCfHgkfjsCMh47mskmU5HGvbmuuh9dVce8M4it/SfMZglGeZx/ccyu/Vsv4/N29f331AY5Bi3+hdo4A92+wXvCwR9mXztrAAAAABJRU5ErkJggg==",
+                bgRPA: "repeat-x top center scroll",
+                replyOp: "1.0",
+                navOp: "0.9",
+                bgColor: "ffffee",
+                mainColor: "f0e0d6",
+                brderColor: "d9bFb7",
+                inputColor: "ffffff",
+                inputbColor: "aaaaaa",
+                blinkColor: "800000",
+                unreadColor: "000080",
+                linkColor: "0000ee",
+                linkHColor: "dd0000",
+                qlColor: "000080",
+                nameColor: "117743",
+                quoteColor: "789922",
+                textColor: "800000",
+                tripColor: "228854",
+                titleColor: "cc1105",
+                headerColor: "800000",
+                headerLColor: "800000",
+                headerLHColor: "dd0000",
+                headerBGColor: "f0e0d6",
+                boardColor: "800000",
+                postHLColor: "228854",
+                quotesYouHLColor: "dd0000",
+                ownPostHLColor: "228854",
+                threadHLColor: "dd0000",
+                replybgHLColor: "d6bad0",
+                replyslctColor: "228854",
+                customCSS: "span.postNum.desktop > a {\ncolor: #800000 !important\n}\nspan.postNum.desktop > a:hover {\ncolor: #dd0000 !important\n}\n.menu-button {\ncolor: #800000 !important\n}"
+            }, {
+                name: "Yotsuba B",
+                authorName: "moot",
+                authorTrip: "!Εр8рui8Vw2",
+                "default": true,
+                bgImg: "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAASUlEQVR4AcWRuQ0AIBDDzuy/HAVrMAM9slCorqAJziNgrj2qSg/cGhHnjPqDDPxOfYiebwFj+XobeLGI7p39fW1/Ib58d55Bwh3x9wRv6r75UwAAAABJRU5ErkJggg==",
+                bgRPA: "repeat-x top center scroll",
+                replyOp: "1.0",
+                navOp: "0.9",
+                bgColor: "eef2ff",
+                mainColor: "d6daf0",
+                brderColor: "b7c5d9",
+                inputColor: "ffffff",
+                inputbColor: "aaaaaa",
+                blinkColor: "34345c",
+                unreadColor: "34345C",
+                linkColor: "34345c",
+                linkHColor: "dd0000",
+                qlColor: "dd0000",
+                nameColor: "117743",
+                quoteColor: "789922",
+                textColor: "000000",
+                tripColor: "228854",
+                titleColor: "0f0c5d",
+                headerColor: "34345c",
+                headerLColor: "34345c",
+                headerLHColor: "dd0000",
+                headerBGColor: "d6daf0",
+                boardColor: "af0a0f",
+                postHLColor: "228854",
+                quotesYouHLColor: "228854",
+                ownPostHLColor: "228854",
+                threadHLColor: "dd0000",
+                replybgHLColor: "d6bad0",
+                replyslctColor: "228854",
+                customCSS: "span.postNum.desktop > a {\ncolor: #000000 !important\n}\nspan.postNum.desktop > a:hover {\ncolor: #dd0000 !important\n}"
+            }, {
                 name: "Vimyanized Dark",
                 authorName: "Seaweed",
                 authorTrip: "!!lq+3fff+/ev",
@@ -2006,78 +2085,6 @@
                 replyslctColor: "8abeb7",
                 customCSS: "span.postNum.desktop > a {\ncolor: #c5c8c6 !important\n}\nspan.postNum.desktop > a:hover {\ncolor: #81a2be !important\n}"
             }, {
-                name: "Yotsuba",
-                authorName: "moot",
-                authorTrip: "!Εр8рui8Vw2",
-                "default": true,
-                bgImg: "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAAWElEQVR4AaWSwQ3AIAwDbfbfpdt0nKrPUp3QCfHgkfjsCMh47mskmU5HGvbmuuh9dVce8M4it/SfMZglGeZx/ccyu/Vsv4/N29f331AY5Bi3+hdo4A92+wXvCwR9mXztrAAAAABJRU5ErkJggg==",
-                bgRPA: "repeat-x top center scroll",
-                replyOp: "1.0",
-                navOp: "0.9",
-                bgColor: "ffffee",
-                mainColor: "f0e0d6",
-                brderColor: "d9bFb7",
-                inputColor: "ffffff",
-                inputbColor: "aaaaaa",
-                blinkColor: "800000",
-                unreadColor: "000080",
-                linkColor: "0000ee",
-                linkHColor: "dd0000",
-                qlColor: "000080",
-                nameColor: "117743",
-                quoteColor: "789922",
-                textColor: "800000",
-                tripColor: "228854",
-                titleColor: "cc1105",
-                headerColor: "800000",
-                headerLColor: "800000",
-                headerLHColor: "dd0000",
-                headerBGColor: "f0e0d6",
-                boardColor: "800000",
-                postHLColor: "228854",
-                quotesYouHLColor: "dd0000",
-                ownPostHLColor: "228854",
-                threadHLColor: "dd0000",
-                replybgHLColor: "d6bad0",
-                replyslctColor: "228854",
-                customCSS: "span.postNum.desktop > a {\ncolor: #800000 !important\n}\nspan.postNum.desktop > a:hover {\ncolor: #dd0000 !important\n}\n.menu-button {\ncolor: #800000 !important\n}"
-            }, {
-                name: "Yotsuba B",
-                authorName: "moot",
-                authorTrip: "!Εр8рui8Vw2",
-                "default": true,
-                bgImg: "iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAIAAACmkByiAAAASUlEQVR4AcWRuQ0AIBDDzuy/HAVrMAM9slCorqAJziNgrj2qSg/cGhHnjPqDDPxOfYiebwFj+XobeLGI7p39fW1/Ib58d55Bwh3x9wRv6r75UwAAAABJRU5ErkJggg==",
-                bgRPA: "repeat-x top center scroll",
-                replyOp: "1.0",
-                navOp: "0.9",
-                bgColor: "eef2ff",
-                mainColor: "d6daf0",
-                brderColor: "b7c5d9",
-                inputColor: "ffffff",
-                inputbColor: "aaaaaa",
-                blinkColor: "34345c",
-                unreadColor: "34345C",
-                linkColor: "34345c",
-                linkHColor: "dd0000",
-                qlColor: "dd0000",
-                nameColor: "117743",
-                quoteColor: "789922",
-                textColor: "000000",
-                tripColor: "228854",
-                titleColor: "0f0c5d",
-                headerColor: "34345c",
-                headerLColor: "34345c",
-                headerLHColor: "dd0000",
-                headerBGColor: "d6daf0",
-                boardColor: "af0a0f",
-                postHLColor: "228854",
-                quotesYouHLColor: "228854",
-                ownPostHLColor: "228854",
-                threadHLColor: "dd0000",
-                replybgHLColor: "d6bad0",
-                replyslctColor: "228854",
-                customCSS: "span.postNum.desktop > a {\ncolor: #000000 !important\n}\nspan.postNum.desktop > a:hover {\ncolor: #dd0000 !important\n}"
-            }, {
                 name: "Yotsuba Purple",
                 authorName: "Seaweed",
                 authorTrip: "!!lq+3fff+/ev",
@@ -2474,12 +2481,45 @@
                 titleColor: "aaaaaa",
                 quoteColor: "71793e",
                 unreadColor: "57577b",
-                postHLColor: "ffffff",
+                postHLColor: "7c2d2d",
                 quotesYouHLColor: "7c2d2d",
-                ownPostHLColor: "ffffff",
+                ownPostHLColor: "7c2d2d",
                 threadHLColor: "aaaaaa",
                 replybgHLColor: "0e0e0e",
-                replyslctColor: "ffffff"
+                replyslctColor: "7c2d2d"
+            }, {
+                name: "Blue Phallus",
+                authorName: "iluvOP",
+                authorTrip: "Tripfags can die.",
+                replyOp: "1.0",
+                navOp: "0.9",
+                mainColor: "242436",
+                brderColor: "242436",
+                inputColor: "242436",
+                inputbColor: "262638",
+                headerBGColor: "242436",
+                headerColor: "da637e",
+                boardColor: "7787a3",
+                bgColor: "20202f",
+                textColor: "a7a7ad",
+                blinkColor: "4b5e57",
+                headerLColor: "4c626d",
+                headerLHColor: "da637e",
+                linkColor: "7787a3",
+                linkHColor: "da637e",
+                qlColor: "4b5e57",
+                nameColor: "da637e",
+                tripColor: "63918b",
+                titleColor: "da637e",
+                quoteColor: "b1b792",
+                unreadColor: "64657b",
+                postHLColor: "da637e",
+                quotesYouHLColor: "da637e",
+                ownPostHLColor: "da637e",
+                threadHLColor: "da637e",
+                replybgHLColor: "20202f",
+                replyslctColor: "da637e",
+                customCSS: ".reply { box-shadow: -2px 2px 2px rgba(0,0,0,.10); }"
             }],
 
             init: function() {

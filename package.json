@@ -9,7 +9,7 @@
     "downloads": "https://github.com/3nly/StyleChan/releases/latest/download/",
     "appid": "peblejlenbfconioafjbmipeogjdhcff",
     "buildsPath": "builds/",
-    "mainBranch": "master",
+    "mainBranch": "main",
     "matches": [
       "*://boards.4chan.org/*"
     ],
