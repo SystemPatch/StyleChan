@@ -967,13 +967,11 @@
             hasGM: typeof GM_deleteValue !== "undefined",
             init: function() {
                 var parseVal = function(key, val) {
-                    if (/^(Selected|Hidden)+\s(Mascots|Themes?)+$/.test(key)) {
+                    if (/^(Selected|Hidden)+\s(Themes?)+$/.test(key)) {
                         if (key === "Selected Theme")
                             return parseInt(val);
                         else if (key === "NSFW Theme")
                             return parseInt(val);
-                        else if (key === "Selected Mascots" && val === 0)
-                            return 0;
 
                         for (var i = 0, MAX = val.length, ret = []; i < MAX; ++i)
                             ret[i] = parseInt(val[i]);
@@ -989,7 +987,7 @@
 
                 for (var key in defaultConfig) {
                     $SS.conf[key] = parseVal(key, this.get(key));
-                    if (!(/^(Hidden|Themes|Selected Mascots|::)/.test(key))) {
+                    if (!(/^(Hidden|Themes|::)/.test(key))) {
                         $SS.exportOptions[key] = $SS.conf[key];
                     };
                 };
@@ -1366,7 +1364,6 @@
             save: function() {
                 var div = $("#oneechan-options"),
                     themes = [],
-                    selectedMascots = [],
                     nsfwTheme,
                     selectedTheme;
 
@@ -2455,6 +2452,40 @@
                 replybgHLColor: "eeeeee",
                 replyslctColor: "476b8f"
             }, {
+                name: "Blue Phallus",
+                authorName: "iluvOP",
+                authorTrip: "!Tripfags can die.",
+                "default": true,
+                replyOp: "1.0",
+                navOp: "0.9",
+                mainColor: "242436",
+                brderColor: "242436",
+                inputColor: "242436",
+                inputbColor: "262638",
+                headerBGColor: "242436",
+                headerColor: "da637e",
+                boardColor: "7787a3",
+                bgColor: "20202f",
+                textColor: "a7a7ad",
+                blinkColor: "4b5e57",
+                headerLColor: "4c626d",
+                headerLHColor: "da637e",
+                linkColor: "7787a3",
+                linkHColor: "da637e",
+                qlColor: "4b5e57",
+                nameColor: "da637e",
+                tripColor: "63918b",
+                titleColor: "da637e",
+                quoteColor: "b1b792",
+                unreadColor: "64657b",
+                postHLColor: "da637e",
+                quotesYouHLColor: "da637e",
+                ownPostHLColor: "da637e",
+                threadHLColor: "da637e",
+                replybgHLColor: "20202f",
+                replyslctColor: "da637e",
+                customCSS: ".reply { box-shadow: -2px 2px 2px rgba(0,0,0,.10); }"
+            }, {
                 name: "Midnight Caek",
                 authorName: "Zixaphir",
                 authorTrip: "!M.........",
@@ -2487,39 +2518,6 @@
                 threadHLColor: "aaaaaa",
                 replybgHLColor: "0e0e0e",
                 replyslctColor: "7c2d2d"
-            }, {
-                name: "Blue Phallus",
-                authorName: "iluvOP",
-                authorTrip: "Tripfags can die.",
-                replyOp: "1.0",
-                navOp: "0.9",
-                mainColor: "242436",
-                brderColor: "242436",
-                inputColor: "242436",
-                inputbColor: "262638",
-                headerBGColor: "242436",
-                headerColor: "da637e",
-                boardColor: "7787a3",
-                bgColor: "20202f",
-                textColor: "a7a7ad",
-                blinkColor: "4b5e57",
-                headerLColor: "4c626d",
-                headerLHColor: "da637e",
-                linkColor: "7787a3",
-                linkHColor: "da637e",
-                qlColor: "4b5e57",
-                nameColor: "da637e",
-                tripColor: "63918b",
-                titleColor: "da637e",
-                quoteColor: "b1b792",
-                unreadColor: "64657b",
-                postHLColor: "da637e",
-                quotesYouHLColor: "da637e",
-                ownPostHLColor: "da637e",
-                threadHLColor: "da637e",
-                replybgHLColor: "20202f",
-                replyslctColor: "da637e",
-                customCSS: ".reply { box-shadow: -2px 2px 2px rgba(0,0,0,.10); }"
             }],
 
             init: function() {
