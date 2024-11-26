@@ -77,6 +77,9 @@
   margin-top: 1px;
   -webkit-margin-after: 1px;
 }
+.textarea .field {
+  min-width: 302px !important;
+}
 :root.ua-gecko .textarea {
   margin-bottom: 1px;
 }
