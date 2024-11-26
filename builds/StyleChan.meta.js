@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         StyleChan
-// @version      1.0.18
+// @version      1.0.19
 // @namespace    StyleChan
 // @description  Customizable themes for 4chan X.
 // @minGMVer     1.14
 // @minFFVer     26
-// @license      GPL-3.0; https://github.com/3nly/StyleChan/blob/master/LICENSE 
+// @license      GPL-3.0; https://github.com/3nly/StyleChan/blob/main/LICENSE 
 // @match        *://boards.4chan.org/*
 // @grant        GM_getValue
 // @grant        GM_setValue

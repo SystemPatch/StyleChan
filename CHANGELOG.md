@@ -1,3 +1,9 @@
+### v1.0.19
+*2024-11-26*
+
+- Add basic 4chan XT support
+- Add new theme: Blue Phallus
+
 ### v1.0.18
 *2024-11-26*
 
