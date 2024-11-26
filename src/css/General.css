@@ -37,7 +37,6 @@ div.post {
 }
 .inline {
   margin-left: 13px !important;
-  display: inherit;
 }
 .postMessage > .inline {
   margin-left: 0 !important;
