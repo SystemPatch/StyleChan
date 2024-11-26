@@ -5,7 +5,7 @@ StyleChan is a userscript functioning on top of 4chan X allowing you to customiz
 
 Originally developed by [seaweedchan](https://github.com/seaweedchan/OneeChan), this is a fork of OneeChan without mascots.
 
-## [Click here to Install](https://github.com/3nly/StyleChan/raw/main/StyleChan.user.js)
+## [Click here to Install](https://github.com/3nly/StyleChan/raw/refs/heads/main/builds/StyleChan.user.js)
 
 
 #### Install instructions
@@ -15,7 +15,7 @@ Installing [4chan X](https://github.com/ccd0/4chan-x) is **REQUIRED** for StyleC
 - In 4chan X **enable**: Quick Reply, Persistent QR and Auto Hide QR.
 
 - Firefox: Requires the [Violentmonkey](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/) addon.
-- Chrom*: Requires the [Violetmonkey](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag/) extension.
+- Chrom*: Requires the [Violentmonkey](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag/) extension.
 
 #### Troubleshooting
 
