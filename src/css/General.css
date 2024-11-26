@@ -37,16 +37,19 @@ div.post {
 }
 .inline {
   margin-left: 13px !important;
+  display: inherit;
 }
 .postMessage > .inline {
   margin-left: 0 !important;
 }
-.inline .op>.postInfo,
 #qp .op>.postInfo {
   min-width: 600px;
 }
 .postMessage {
   margin: " + $SS.conf["Margin Post Message"] + " !important;
+}
+.postContainer.opContainer {
+  margin: 0 !important;
 }
 /* Fit Expanded Images option */
 :root.fit-eximg:root.fit-height .full-image {

@@ -39,6 +39,7 @@ hr:not(#unread-line),
 :root.hide-navlinks .navLinks.navLinksBot.desktop,
 :root.hide-navlinks .navLinks,
 .ad-plea,
+.adl,
 .exif:not([style]),
 [hidden] {
   display: none;
