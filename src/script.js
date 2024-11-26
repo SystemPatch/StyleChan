@@ -1238,7 +1238,6 @@
                     p = $("<p class='buttons-container'>");
 
                 p.append($("<a class='options-button' name=addTheme title='Create a new theme.'>Create", tOptions).bind("click", $SS.options.showTheme));
-                p.append($("<a class='options-button' href='https://github.com/nebukazar/StyleChan/wiki/Custom-Themes' title='Learn more about custom themes and download new ones.' target='_blank'>Custom Themes"));
                 p.append($("<div id='import-link' title='Import a new theme (.json) file.'>").append($("<input type=file class='import-input' riced=true>")
                     .bind("change", function() {
                         var file = this.files[0],
