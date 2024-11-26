@@ -6,7 +6,7 @@
 - Prevent QR textarea from getting scrollbars
 
 
-## v1.0.16
+### v1.0.16
 *2024-11-26*
 
 - Fix inline OP posts getting cut off when window size is reduced
