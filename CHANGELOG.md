@@ -1,3 +1,9 @@
+### v1.0.18
+*2024-11-26*
+
+- Fix inline posts not rendering correctly
+- Prevent QR textarea from getting scrollbars (this time for realz)
+
 ### v1.0.17
 *2024-11-26*
 
