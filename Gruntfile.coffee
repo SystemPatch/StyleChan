@@ -40,21 +40,6 @@ module.exports = (grunt) ->
         src: 'tmp/style.css'
         dest: 'tmp/style.min.css'
 
-    shell:
-      commit:
-        options: shellOptions
-        command: [
-          'git checkout <%= pkg.meta.mainBranch %>',
-          'git commit -am "Release <%= pkg.meta.name %> v<%= pkg.version %>."',
-          'git tag -a <%= pkg.version %> -m "<%= pkg.meta.name %> v<%= pkg.version %>."',
-          'git tag -af stable -m "<%= pkg.meta.name %> v<%= pkg.version %>."'
-        ].join(' && ')
-        stdout: true
-
-      push:
-        options: shellOptions
-        command: 'git push origin --tags -f && git push origin --all' 
-
     compress:
       crx:
         options:
@@ -94,8 +79,6 @@ module.exports = (grunt) ->
   grunt.registerTask 'release', [
     'default'
     'compress:crx'
-    'shell:commit'
-    'shell:push'
   ]
 
   grunt.registerTask 'patch',   [

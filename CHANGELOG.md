@@ -1,4 +1,10 @@
-### v1.10
+## v1.0.16
+*2024-11-26*
+
+- Fix inline OP posts getting cut off when window size is reduced
+- Fix inline OP posts margin
+
+### v1.0.15
 *2024-11-15*
 
 - New feature: Show 4chan Pass Users

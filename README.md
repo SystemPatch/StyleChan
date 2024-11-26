@@ -29,5 +29,5 @@ Installing [4chan X](https://github.com/ccd0/4chan-x) is **REQUIRED** for StyleC
 #### Development & Contribution
 
 - [Changelog](https://github.com/3nly/StyleChan/blob/main/CHANGELOG.md)
-- [Source Code](https://github.com/3nly/StyleChan/)
+- [Contributing](https://github.com/3nly/StyleChan/blob/main/CONTRIBUTING.md)
 - [Reporting Bugs](https://github.com/3nly/StyleChan/issues)
