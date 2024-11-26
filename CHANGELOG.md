@@ -1,3 +1,11 @@
+### v1.0.17
+*2024-11-26*
+
+- Add padding to top navigation links
+- Various small fixes for QR
+- Prevent QR textarea from getting scrollbars
+
+
 ## v1.0.16
 *2024-11-26*
 
