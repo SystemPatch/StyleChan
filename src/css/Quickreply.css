@@ -25,7 +25,7 @@
   margin: 0 !important;
 }
 #qr-file-button,
-#qr-filename-container {
+:root:not(.fourchan-xt) #qr-filename-container {
   margin-right: 1px !important;
 }
 #qr-spoiler-label + input[type='submit'] {
@@ -170,4 +170,8 @@ input[type="number"] {
 /* Captcha */
 #t-resp {
   width: 178px !important;
+}
+/* 4chan XT */
+#file-n-submit .row.space {
+  margin-top: 1px;
 }
