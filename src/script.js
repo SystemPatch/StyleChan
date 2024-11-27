@@ -71,6 +71,7 @@
                     value: 3
                 }], true
             ],
+            "SS-like Sidebar": [false, "Darkens the sidebar and adds a border like 4chan Style Script."],
             "Minimal Sidebar": [true, "Shrinks the sidebar and moves the banner."],
             ":: Quick Reply": ["header", ""],
             "Autohide Style": [
@@ -2555,6 +2556,7 @@
                 $("html").optionClass("Decoration Style", 3, "hl-border-down");
                 $("html").optionClass("Sidebar Position", 1, "right-sidebar");
                 $("html").optionClass("Sidebar Position", 2, "left-sidebar");
+                $("html").optionClass("SS-like Sidebar", true, "ss-sidebar");
                 $("html").optionClass("Minimal Sidebar", true, "mini-sidebar");
                 $("html").optionClass("Recolor Even Replies", true, "recolor-even");
                 $("html").optionClass("Backlink Icons", true, "backlink-icon");
