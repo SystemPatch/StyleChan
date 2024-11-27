@@ -102,7 +102,7 @@
             "OP Background": [true, "Give OP a background similar to a reply."],
             "Recolor Even Replies": [false, "Makes every other post a darker color. If Quote Threading is enabled darkens every root reply."],
             "Reduce Thumbnail Opacity": [false, "Reduces opacity of thumbnails."],
-            "Backlink Icons": [true, "Use icons for backlinks instead of text."],
+            "Backlink Icons": [false, "Use icons for backlinks instead of text."],
             "Backlinks on Bottom": [false, "Move backlinks to the bottom right of replies."],
             "Show 4chan Pass users": [false, "Show a four leaf clover indicating a pass user."],
             "Borders": [
