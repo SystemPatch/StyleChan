@@ -148,8 +148,8 @@
                 }]
             ],
             ":: Catalog": ["header", ""],
-            "Justified Text": [true, "Justifies the teaser text of every thread to be more uniform."],
-            "Show Background": [false, "Threads receive a matching background."],
+            "Justified Text": [false, "Justifies the teaser text of every thread to be more uniform."],
+            "Show Background": [true, "Threads receive a matching background."],
             "Unified Thumbnail Size": [false, "Makes all thumbnails the same size regardless of aspect ratio."],
             ":: 4chan X Header": ["header", ""],
             "Show Header Background Gradient": [false, "Gives the header bar a gradient background."],
