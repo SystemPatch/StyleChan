@@ -78,7 +78,7 @@
   -webkit-margin-after: 1px;
 }
 .textarea .field {
-  min-width: 302px !important;
+  min-width: 297px !important;
 }
 :root.ua-gecko .textarea {
   margin-bottom: 1px;
@@ -89,6 +89,9 @@
 }
 :root.force-qr #qr {
   max-width: 297px;
+}
+#t-help {
+  margin: 0px 0px 0px 2px !important;
 }
 /* Vertical QR */
 :root.vertical-qr #qr > div > label > div {

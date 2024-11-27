@@ -90,7 +90,7 @@
             "Remove Background": [false, "Removes the QR background."],
             "Remove Controls": [false, "Removes the QR controls and checkbox."],
             "Expanding Form Inputs": [true, "Makes certain form elements expand on focus."],
-            "Force QR to Sidebar Size": [false, "QR will no longer extend past the sidebar size."],
+            "Force QR to Sidebar Size": [true, "QR will no longer extend past the sidebar size."],
             ":: Replies": ["header", ""],
             "Fit Width": [true, "Replies stretch to the width of the page."],
             "Fit Expanded Images": [false, "Expanded images will better fit to the viewport."],
