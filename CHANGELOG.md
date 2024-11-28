@@ -1,3 +1,8 @@
+### v1.0.21
+*2024-11-28*
+
+- Browser-specific fixes for QR
+
 ### v1.0.20
 *2024-11-28*
 
@@ -18,7 +23,6 @@
 - Danbo ads are now fully accounted for and adjusted
 - [Advertise on 4chan] banner can be toggled independently
 - Updated settings
-
 
 ### v1.0.19
 *2024-11-26*
