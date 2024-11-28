@@ -51,9 +51,10 @@
             "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
             "Show Blotter": [false, "Toggle visibility of the 4chan news blotter."],
             "Show 4chan Ads": [false, "Opts into 4chan\'s banner ads.", null, true],
+            "Show Board Banners": [false, "Toggle visibility of board banners.", "Show 4chan Ads", true, true],
             "Show Top Ad": [true, "Show the top 4chan banner ad.", "Show 4chan Ads", true, true],
-            "Show Middle Ad": [true, "Show the middle 4chan banner ad.", "Show 4chan Ads", true, true],
             "Show Bottom Ad": [true, "Show the bottom 4chan banner ad.", "Show 4chan Ads", true, true],
+            "Show Buy Ad Banner": [true, "Show the [Advertise on 4chan] banner below ads.", "Show 4chan Ads", true, true],
             "Reduce Ad Opacity": [false, "Reduce the opacity of ads until hover for easier viewing.", "Show 4chan Ads", true, true],
             "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads.", null, true],
             "Show Top Links": [true, "Toggle visibility of the top navigation links.", "Show Navigation Links", true, true],
@@ -855,13 +856,11 @@
                 };
 
                 // 4chan ads being added with JS
-                if (!$SS.conf["Show Top Ad"]) {
+                if (!$SS.conf["Show 4chan Ads"]||!$SS.conf["Show Top Ad"]) {
                     $(".topad.center").remove();
-                    $(".aboveMidAd.center").remove();
                     $("#danbo-s-t.danbo-slot").remove();
-                } else if (!$SS.conf["Show Middle Ad"]) {
-                    $(".middlead.center").remove();
-                } else if (!$SS.conf["Show Bottom Ad"]) {
+                }
+                if (!$SS.conf["Show 4chan Ads"]||!$SS.conf["Show Bottom Ad"]) {
                     $(".bottomad.center").remove();
                     $("#danbo-s-b.danbo-slot").remove();
                 }
@@ -2580,13 +2579,14 @@
                 $("html").optionClass("Highlight Current Board", false, "header-highlight");
                 $("html").optionClass("Show Blotter", false, "hide-blotter");
                 $("html").optionClass("Show 4chan Ads", true, "show-ads");
-                $("html").optionClass("Show Top Ad", false, "hide-top");
-                $("html").optionClass("Show Middle Ad", false, "hide-middle");
-                $("html").optionClass("Show Bottom Ad", false, "hide-bottom");
+                $("html").optionClass("Show Board Banners", false, "hide-board-banners");
+                $("html").optionClass("Show Top Ad", false, "hide-top-ad");
+                $("html").optionClass("Show Bottom Ad", false, "hide-bottom-ad");
+                $("html").optionClass("Show Buy Ad Banner", false, "hide-adl");
+                $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity");
                 $("html").optionClass("Show Navigation Links", false, "hide-navlinks");
                 $("html").optionClass("Show Top Links", false, "hide-navlinktop");
                 $("html").optionClass("Show Bottom Links", false, "hide-navlinkbot");
-                $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
                 $("html").optionClass("Justified Text", true, "catalog-justify");
                 $("html").optionClass("Show Background", true, "catalog-background");
