@@ -62,9 +62,9 @@
 :root.ua-blink #qr:not(.has-captcha) textarea {
   min-height: 185px !important;
 }
-:root.ua-blink #qr.has-captcha textarea.field {
-  height: 8.6em;
-  min-height: 0.6em !important;
+:root.ua-blink #qr.has-captcha textarea.field,
+:root.ua-gecko #qr.has-captcha textarea.field {
+  min-height: 9em !important;
 }
 :root.qr-background #qr {
   background: transparent !important;
@@ -73,21 +73,20 @@
 :root.qr-opacity #qr {
   opacity: 0.9;
 }
-:root.ua-gecko .textarea .field {
-  min-width: 302px !important;
-}
-:root.ua-gecko #t-help {
-  margin: 0 0 0 6px !important;
-}
+:root.ua-gecko #t-help,
 :root.ua-blink #t-help {
-  margin: 0px 0px 0px 2px !important;
+  margin: 0 0 0 2px !important;
 }
+:root.ua-gecko .textarea .field,
 :root.ua-blink .textarea .field {
   min-width: 297px !important;
+  max-height: 65vh;
 }
 .textarea {
   margin-top: 1px;
   -webkit-margin-after: 1px;
+  max-height: 65vh;
+  min-height: 9em;
 }
 :root.ua-gecko .textarea {
   margin-bottom: 1px;
