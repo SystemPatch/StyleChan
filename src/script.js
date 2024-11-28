@@ -76,7 +76,7 @@
             "Minimal Sidebar": [true, "Shrinks the sidebar and moves the banner."],
             ":: Quick Reply": ["header", ""],
             "Autohide Style": [
-                2, "Changes how the quick reply is hidden. Please enable Autohide QR in 4chan X.", [{
+                2, "Changes how the quick reply is hidden. Please enable Autohide QR in 4chan X. Vertical Tabbed only works with the sidebar enabled.", [{
                     name: "Normal",
                     value: 1
                 }, {
@@ -91,7 +91,6 @@
             "Remove Background": [false, "Removes the QR background."],
             "Remove Controls": [false, "Removes the QR controls and checkbox."],
             "Expanding Form Inputs": [true, "Makes certain form elements expand on focus."],
-            "Force QR to Sidebar Size": [true, "QR will no longer extend past the sidebar size."],
             ":: Replies": ["header", ""],
             "Fit Width": [true, "Replies stretch to the width of the page."],
             "Fit Expanded Images": [false, "Expanded images will better fit to the viewport."],
@@ -2567,7 +2566,6 @@
                 $("html").optionClass("Transparent QR", true, "qr-opacity");
                 $("html").optionClass("Remove Background", true, "qr-background");
                 $("html").optionClass("Remove Controls", true, "qr-controls");
-                $("html").optionClass("Force QR to Sidebar Size", true, "force-qr");
                 $("html").optionClass("Indent OP", false, "force-indent");
                 $("html").optionClass("Allow Wrapping Around OP", false, "force-wrapping");
                 $("html").optionClass("OP Background", true, "op-background");

@@ -4,10 +4,10 @@
   z-index: 10;
 }
 :root.left-sidebar body {
-  padding-left: 303px;
+  padding-left: 306px;
 }
 :root.right-sidebar body {
-  padding-right: 303px;
+  padding-right: 306px;
 }
 :root.left-sidebar:not(.mini-sidebar) .boardBanner,
 :root.right-sidebar:not(.mini-sidebar) .boardBanner {
@@ -42,7 +42,7 @@
   box-shadow:inset " + $SS.theme.brderColor.hex + " 1px 0 0,inset " + $SS.theme.brderColor.hex + " -1px 0 0;
   content:'';
   height:100%;
-  width:302px;
+  width:305px;
   position:fixed;
   top:0;
   right: 0;

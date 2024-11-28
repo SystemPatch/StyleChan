@@ -2,7 +2,6 @@
 #qr {
   box-shadow: none !important;
   border-radius: 0 !important;
-  min-width: 297px !important;
   box-shadow: none !important;
 }
 #qr .close {
@@ -10,14 +9,14 @@
 }
 #qr .riceCheck,
 #qr input[type=checkbox] {
-  margin: 0px 4px 1px!important;
+  margin: 0 4px 1px!important;
   vertical-align: baseline;
   position: relative;
   top: 3px;
 }
 #qr-filename-container .riceCheck,
 #qr-filename-container input[type=checkbox] {
-  margin: 0px 0px 1px!important;
+  margin: 0 0 1px!important;
 }
 #qr-file-button,
 #qr input[type='submit'] {
@@ -33,7 +32,7 @@
   margin-top: 1px !important;
 }
 #qr > form > select {
-  margin: 1px 0px !important;
+  margin: 1px 0 !important;
 }
 #qr select[data-name="thread"] {
   margin: 1px 0 1px 0;
@@ -56,15 +55,28 @@
 :root.expand-inputs .persona .field:focus {
   flex: 3;
 }
-#qr:not(.has-captcha) textarea {
+#qr textarea {
   min-height: 190px !important;
 }
-:root.ua-blink #qr:not(.has-captcha) textarea {
+:root.ua-blink #qr textarea {
   min-height: 185px !important;
 }
-:root.ua-blink #qr.has-captcha textarea.field,
-:root.ua-gecko #qr.has-captcha textarea.field {
+:root.ua-blink #qr textarea.field,
+:root.ua-gecko #qr textarea.field {
   min-height: 9em !important;
+  min-width: 302px !important;
+}
+:root.fourchan-x:not(.fourchan-xt).ua-blink #qr textarea.field,
+:root.fourchan-x:not(.fourchan-xt).ua-gecko #qr textarea.field {
+  max-height: 65vh;
+}
+:root.fourchan-xt.ua-blink #qr textarea.field,
+:root.fourchan-xt.ua-gecko #qr textarea.field {
+  max-height: 64vh;
+}
+:root.right-sidebar #qr textarea.field,
+:root.left-sidebar #qr textarea.field {
+  max-width: 302px !important;
 }
 :root.qr-background #qr {
   background: transparent !important;
@@ -77,16 +89,16 @@
 :root.ua-blink #t-help {
   margin: 0 0 0 2px !important;
 }
-:root.ua-gecko .textarea .field,
-:root.ua-blink .textarea .field {
-  min-width: 297px !important;
-  max-height: 65vh;
-}
 .textarea {
   margin-top: 1px;
   -webkit-margin-after: 1px;
-  max-height: 65vh;
   min-height: 9em;
+}
+:root.fourchan-x:not(.fourchan-xt) .textarea {
+  max-height: 65vh;
+}
+:root.fourchan-xt .textarea {
+  max-height: 64vh;
 }
 :root.ua-gecko .textarea {
   margin-bottom: 1px;
@@ -96,9 +108,6 @@
   min-height: 58px !important;
   margin-bottom: 1px;
 }
-:root.force-qr #qr {
-  max-width: 297px;
-}
 /* Vertical QR */
 :root.vertical-qr #qr > div > label > div {
   display: none;
@@ -107,7 +116,6 @@
   resize: vertical !important;
 }
 :root.vertical-qr #qr {
-  min-width: 297px !important;
   top: auto !important;
   position: fixed;
 }
