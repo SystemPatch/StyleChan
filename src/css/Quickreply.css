@@ -59,10 +59,10 @@
 #qr:not(.has-captcha) textarea {
   min-height: 190px !important;
 }
-:root.ua-webkit #qr:not(.has-captcha) textarea {
+:root.ua-blink #qr:not(.has-captcha) textarea {
   min-height: 185px !important;
 }
-:root.ua-webkit #qr.has-captcha textarea.field {
+:root.ua-blink #qr.has-captcha textarea.field {
   height: 8.6em;
   min-height: 0.6em !important;
 }
@@ -73,15 +73,25 @@
 :root.qr-opacity #qr {
   opacity: 0.9;
 }
+:root.ua-gecko .textarea .field {
+  min-width: 302px !important;
+}
+:root.ua-gecko #t-help {
+  margin: 0 0 0 6px !important;
+}
+:root.ua-blink #t-help {
+  margin: 0px 0px 0px 2px !important;
+}
+:root.ua-blink .textarea .field {
+  min-width: 297px !important;
+}
 .textarea {
   margin-top: 1px;
   -webkit-margin-after: 1px;
 }
-.textarea .field {
-  min-width: 297px !important;
-}
 :root.ua-gecko .textarea {
   margin-bottom: 1px;
+  margin-top: 1px;
 }
 .captcha-img {
   min-height: 58px !important;
@@ -89,9 +99,6 @@
 }
 :root.force-qr #qr {
   max-width: 297px;
-}
-#t-help {
-  margin: 0px 0px 0px 2px !important;
 }
 /* Vertical QR */
 :root.vertical-qr #qr > div > label > div {
