@@ -1,3 +1,25 @@
+### v1.0.20
+*2024-11-28*
+
+- New option: Backlink shadow
+- New option: SS-like sidebar
+- Fixes for StyleChan icon when using 4chan XT
+- Fixes for banners and board titles
+- Fix for justified text in catalog
+- Small QR fixes
+- Adjusted defaults
+- Various small fixes
+- Removed: Backlinks on Bottom option (broken for OP posts)
+- Removed: ExLinks support (deprecated?)
+
+**PR by @SystemPatch:**
+
+- Fix issues in ad removal code in script
+- Danbo ads are now fully accounted for and adjusted
+- [Advertise on 4chan] banner can be toggled independently
+- Updated settings
+
+
 ### v1.0.19
 *2024-11-26*
 
