@@ -204,7 +204,8 @@ input[type=checkbox]:checked+.riceCheck::before {
 :root:not(.fixed) .boardBanner {
   top: 0;
 }
-.center {
+.center,
+.danbo-slot {
   margin: 5px !important;
 }
 #full-board-list>a,
@@ -350,11 +351,13 @@ table.flashListing .highlightPost {
   box-shadow: none !important;
 }
 /* Ads */
-:root.ad-opacity .center img {
+:root.ad-opacity .center img,
+:root.ad-opacity .danbo-slot {
   opacity: .5;
   transition: opacity .3s ease-out 0s;
 }
-:root.ad-opacity .center img:hover {
+:root.ad-opacity .center img:hover,
+:root.ad-opacity .danbo-slot:hover {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
 }
