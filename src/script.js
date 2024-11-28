@@ -105,7 +105,6 @@
             "Reduce Thumbnail Opacity": [false, "Reduces opacity of thumbnails."],
             "Backlink Icons": [false, "Use icons for backlinks instead of text."],
             "Backlink Shadow": [false, "Add a shadow to the backlink text."],
-            "Backlinks on Bottom": [false, "Move backlinks to the bottom right of replies."],
             "Show 4chan Pass users": [false, "Show a four leaf clover indicating a pass user."],
             "Borders": [
                 2, "Changes which sides of replies have borders.", [{
@@ -2561,9 +2560,8 @@
                 $("html").optionClass("Recolor Even Replies", true, "recolor-even");
                 $("html").optionClass("Backlink Icons", true, "backlink-icon");
                 $("html").optionClass("Backlink Shadow", true, "backlink-shadow");
-                $("html").optionClass("Backlinks on Bottom", true, "backlink-bottom");
                 $("html").optionClass("Show 4chan Pass users", true, "no-pu");
-				$("html").optionClass("Fit Expanded Images", true, "fit-eximg");
+                $("html").optionClass("Fit Expanded Images", true, "fit-eximg");
                 $("html").optionClass("Autohide Style", 2, "vertical-qr");
                 $("html").optionClass("Autohide Style", 3, "fade-qr");
                 $("html").optionClass("Transparent QR", true, "qr-opacity");
