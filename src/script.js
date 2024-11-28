@@ -248,7 +248,7 @@
                 }]
             ],
             "Font Size": [13, "Set the general size of text (Pixels). Min: 10px, Max: 18px"],
-            "Backlink Font Size": [11, "Set the font size of backlinks."],
+            "Backlink Font Size": [10, "Set the font size of backlinks."],
             "Bitmap Font": [false, "Check this if you are using a bitmap font."],
             "Themes": [],
             "Hidden Themes": [],
