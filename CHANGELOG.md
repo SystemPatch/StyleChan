@@ -1,3 +1,8 @@
+### v1.0.22
+*2024-11-28*
+
+- More browser-specific fixes for QR (sorry)
+
 ### v1.0.21
 *2024-11-28*
 
