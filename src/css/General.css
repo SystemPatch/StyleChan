@@ -115,7 +115,8 @@ div.post {
 :root.reply-fit-width .reply .container {
   padding-right: 5px;
 }
-.menu-button + .container:not(:empty) {
+.menu-button + .container:not(:empty),
+.menu-button.active + .container:not(:empty) {
   margin-left: 4px !important;
 }
 :root.reply-fit-width .post .menu-button {
