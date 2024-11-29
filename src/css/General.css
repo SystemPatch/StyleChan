@@ -323,6 +323,9 @@ hr {
   opacity: .2;
 }
 /* /f/ */
+#swf-embed {
+  z-index: 21;
+}
 table.flashListing {
   margin-top: 20px;
   margin-bottom: 20px;
