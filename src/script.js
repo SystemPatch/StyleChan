@@ -1033,7 +1033,7 @@
                     return $(".fourchan-x #shortcuts, .fourchan_x, .is_catalog").exists();
                 }, function() {
                     $(".fourchan-x:not(.fourchan-xt)").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(a) : $("#boardNavDesktop").append(b);
-                    $(".fourchan-xt").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(c) : $(".shortcut.brackets-wrap:last-of-type");
+                    $(".fourchan-xt").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(c) : $("#boardNavDesktop").append(b);
                     
                 });
 

@@ -186,9 +186,7 @@ span.hide-announcement {
   float: right;
   margin-bottom: 8px;
 }
-
 /* Other */
-
 #navlinks {
   top: 135px;
   right: 10px;
@@ -197,15 +195,14 @@ span.hide-announcement {
   filter: invert(100%);
   -webkit-filter: invert(100%);
 }
-
 /* Accommodate Oneechan icon in header */
-
 .centered-links:root #shortcuts {
-  width: 350px !important;
+  width: 30vw !important;
 }
-
+:root.centered-links #custom-board-list {
+  left: 12vw !important;
+}
 /* Blotter */
-
 #blotter {
   margin: auto;
   font-size: 11px;

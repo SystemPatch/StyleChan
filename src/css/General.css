@@ -208,7 +208,8 @@ input[type=checkbox]:checked+.riceCheck::before {
 }
 .globalMessage, h2, h3 {
   margin: auto;
-}#custom-board-list,
+}
+#custom-board-list,
 #full-board-list,
 .shortcut {
   vertical-align: baseline !important;
