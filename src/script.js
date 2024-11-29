@@ -104,7 +104,7 @@
             "Reduce Thumbnail Opacity": [false, "Reduces opacity of thumbnails."],
             "Backlink Icons": [false, "Use icons for backlinks instead of text."],
             "Backlink Shadow": [false, "Add a shadow to the backlink text."],
-            "Show 4chan Pass users": [false, "Show a four leaf clover indicating a pass user."],
+            "Show 4chan Pass users": [true, "Show a four leaf clover indicating a pass user."],
             "Borders": [
                 2, "Changes which sides of replies have borders.", [{
                     name: "Normal (4chan default)",
@@ -153,9 +153,9 @@
             "Show Background": [true, "Threads receive a matching background."],
             "Unified Thumbnail Size": [false, "Makes all thumbnails the same size regardless of aspect ratio."],
             ":: 4chan X Header": ["header", ""],
-            "Show Header Background Gradient": [false, "Gives the header bar a gradient background."],
+            "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
             "Show Header Shadow": [true, "Gives the header a drop shadow."],
-            "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
+            "Highlight Current Board": [false, "Gives the current board link a bottom highlight border."],
             ":: Post Decoration": ["header", ""],
             "Decoration Style": [
                 0, "Changes the decoration of all posts.", [{
