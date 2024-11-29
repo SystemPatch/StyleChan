@@ -145,10 +145,12 @@ body.is_catalog .panel,
 #tegaki,
 .boxbar,
 :root.op-background .postContainer.opContainer,
-.flashListing tr:nth-of-type(2n+1),
 .dd-menu ul,
 :root.catalog-hover-expand .catalog-container:hover > .post {
   background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ")!important;
+}
+.flashListing tr:nth-of-type(2n+1) {
+  background: rgba(" + $SS.theme.mainColor.rgb + "," + $SS.theme.replyOp + ");
 }
 :root.recolor-even .thread>.replyContainer:nth-of-type(even):not(.hidden) .post {
   background: rgb\(" + $SS.theme.mainColor.shiftRGB(-10) + ") !important;
