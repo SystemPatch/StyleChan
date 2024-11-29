@@ -56,3 +56,8 @@ div.thread {
   width: 150px !important;
   height: 150px !important;
 }
+:root.catalog-thumbsize #delform>.catalog-large .thumb,
+:root.catalog-thumbsize #delform>.catalog-large img.catalog-thumb  {
+  width: 250px !important;
+  height: 250px !important;
+}
