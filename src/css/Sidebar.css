@@ -14,10 +14,10 @@
   position: fixed;
 }
 :root.left-sidebar:not(.mini-sidebar) .boardBanner {
-  left: 3px;
+  left: 2px;
 }
 :root.right-sidebar:not(.mini-sidebar) .boardBanner {
-  right: 3px;
+  right: 2px;
 }
 :root.fixed:not(.autohide):not(.bottom) .boardBanner {
   margin-top: -6px;
