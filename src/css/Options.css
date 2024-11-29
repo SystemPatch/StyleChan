@@ -7,9 +7,11 @@
   margin: auto;
 }
 #oneechan-options {
-  width: 690px;
+  width: 600px;
+  max-width: 85%;
   text-align:left!important;
   height: 532px;
+  max-height: 85%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -39,6 +41,7 @@
 }
 :root.ua-webkit #add-theme {
   height: 403px !important;
+  max-height: 100%;
 }
 #add-theme .option-title {
   float:left;
@@ -55,6 +58,7 @@
 #options-container:not(.yui-skin-sam),
 .options-section {
   height:500px;
+  max-height: 100%;
 }
 .options-section {
   overflow-y:auto;
