@@ -1,3 +1,17 @@
+### v1.0.23
+*2024-11-29*
+
+- Rewrite of Quick Reply and Sidebar CSS
+- Changed defaults for a few options
+- Fix for theme custom CSS not working
+- Made StyleChan's options menu a bit more responsive for smaller screens
+- Made 4chan X/XT's header bar more responsive for boardlist and settings icons
+- Fix for Unified Thumbnail Size in the catalog not working with large thumbnails
+- Fixes for /f/ - Flash board: 
+  - Embeds will no longer be hidden behind other elements
+  - Catalog and OP posts visual changes
+- Various small fixes
+
 ### v1.0.22
 *2024-11-28*
 
