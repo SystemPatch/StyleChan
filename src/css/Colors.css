@@ -14,7 +14,8 @@ select,
 .captcha-root,
 .tegaki-label,
 .dd-menu ul,
-.boxbar {
+.boxbar,
+.postblock {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
@@ -291,6 +292,7 @@ textarea,
 :root.vertical-qr #qr .move,
 #qr select,
 select,
+.postblock,
 #post-preview,
 .captcha-root,
 .dd-menu ul,

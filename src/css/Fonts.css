@@ -167,7 +167,10 @@ a.current {
 .qr-link {
   font-weight: normal;
 }
-
+/* /f/ */
+.postblock {
+  font-weight: 700;
+}
 /* Font Style */
 
 .summary {
