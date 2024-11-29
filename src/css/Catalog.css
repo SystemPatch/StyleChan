@@ -8,6 +8,13 @@ div.thread {
   clear: both;
   padding-bottom: 10px;
 }
+/* Native Catalog */
+#ctrl {
+  padding-top: 4px;
+}
+#threads {
+  padding: 10px 0 !important;
+}
 /* Catalog Link */
 .pages.cataloglink {
   margin-left: 12px;

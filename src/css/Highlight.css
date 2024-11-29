@@ -13,11 +13,11 @@
 }
 /* Filter Highlighting */
 .filter-highlight .catalog-thumb {
-  box-shadow: 0px 0px 3px 3px rgba(" + $SS.theme.postHLColor.rgb + ",0.5) !important;
+  box-shadow: 0 0 3px 3px rgba(" + $SS.theme.postHLColor.rgb + ",0.5) !important;
 }
 .filter-highlight.opContainer,
 .filter-highlight > .reply {
-  box-shadow: 5px 0px rgba(" + $SS.theme.postHLColor.rgb + ",0.5) inset !important;
+  box-shadow: 5px 0 rgba(" + $SS.theme.postHLColor.rgb + ",0.5) inset !important;
 }
 .filter-highlight > div.sideArrows {
   color: rgba(" + $SS.theme.postHLColor.rgb + ",0.5) !important;

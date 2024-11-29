@@ -2416,7 +2416,7 @@
                 threadHLColor: "a0a0a0",
                 replybgHLColor: "141414",
                 replyslctColor: "ffffff",
-                customCSS: "body{\nbackground: rgba(19,19,19,1);\n}\n.boardBanner .boardTitle {\ntext-shadow: 0 0 3px #a0a0a0 !important;\nletter-spacing: 0px !important;\n}\n#delform {\n padding: 0px 2px !important;\n background: rgba(19,19,19,1);\n}"
+                customCSS: "body{\nbackground: rgba(19,19,19,1);\n}\n.boardBanner .boardTitle {\ntext-shadow: 0 0 3px #a0a0a0 !important;\nletter-spacing: 0px !important;\n}\n#delform {\n padding: 0 2px !important;\n background: rgba(19,19,19,1);\n}"
             }, {
                 name: "Cold Snap",
                 authorName: "Kori",
@@ -3393,7 +3393,7 @@
             } else
                 obj = window.location;
 
-            var pathname = obj.pathname.substr(1).split("/");
+            var pathname = obj.pathname.slice(1).split("/");
 
             return {
                 sub: obj.hostname.split(".")[0],
