@@ -14,10 +14,10 @@
   position: fixed;
 }
 :root.left-sidebar:not(.mini-sidebar) .boardBanner {
-  left: 1px;
+  left: 3px;
 }
 :root.right-sidebar:not(.mini-sidebar) .boardBanner {
-  right: 1px;
+  right: 3px;
 }
 :root.fixed:not(.autohide):not(.bottom) .boardBanner {
   margin-top: -6px;
@@ -42,7 +42,7 @@
   box-shadow:inset " + $SS.theme.brderColor.hex + " 1px 0 0,inset " + $SS.theme.brderColor.hex + " -1px 0 0;
   content:'';
   height:100%;
-  width:305px;
+  width:306px;
   position:fixed;
   top:0;
   right: 0;

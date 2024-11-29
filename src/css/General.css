@@ -250,12 +250,8 @@ hr {
 #bannerCnt {
   border: 0 !important;
   margin: 0 auto;
-  width: 300px;
-  max-height: 100px !important;
-  max-width: 100%;
 }
 .boardBanner {
-  width: 300px;
   margin: auto;
 }
 .boardBanner>img {
