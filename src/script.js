@@ -153,7 +153,7 @@
             "Show Background": [true, "Threads receive a matching background."],
             "Unified Thumbnail Size": [false, "Makes all thumbnails the same size regardless of aspect ratio."],
             ":: 4chan X Header": ["header", ""],
-            "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
+            "Show Header Background Gradient": [false, "Gives the header bar a gradient background."],
             "Show Header Shadow": [true, "Gives the header a drop shadow."],
             "Highlight Current Board": [false, "Gives the current board link a bottom highlight border."],
             ":: Post Decoration": ["header", ""],
