@@ -7,19 +7,18 @@
   margin: auto;
 }
 #oneechan-options {
-  width: 600px;
+  width: 610px;
   max-width: 85%;
   text-align:left!important;
-  height: 532px;
-  max-height: 85%;
+  height: 65vh;
+  max-height: 1310px;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   box-shadow: rgba(0,0,0,.6) 0 0 10px !important;
-  padding: 5px;
+  padding: 5px 5px 35px 5px;
 }
-.options-close,
 #options-container:not(.yui-skin-sam) {
   padding: 3px;
 }
@@ -27,9 +26,14 @@
   box-shadow: inset rgba(0,0,0,.3) 0 0 5px;
 }
 .options-close {
-  text-align: right !important;
-  margin-right: auto;
+  text-align: right!important;
   margin-left: auto;
+  width: 150px;
+  right: 0;
+  padding: 2px 4px;
+/* Set z-index higher than other buttons */
+  position: absolute;
+  z-index: 120;
 }
 /* Main */
 #options-container:not(.yui-skin-sam) {
@@ -37,8 +41,7 @@
 }
 #options-container:not(.yui-skin-sam),
 .options-section {
-  height:500px;
-  max-height: 100%;
+  height: 100%;
 }
 .options-section {
   overflow-y:auto;
@@ -266,7 +269,9 @@ select[name='Font Family']>option {
 .buttons-container {
   bottom:3px;
   left:5px;
+/* Set z-index lower than the save button */
   position:absolute;
+  z-index:100;
 }
 .buttons-container {
   margin:0;
