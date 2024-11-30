@@ -1,27 +1,20 @@
 /* Anything we need 0px */
-
 .deleteform,
 .pages,
 .pagelist button,
 #full-board-list {
   font-size: 0 !important;
 }
-
 /* Anything we need small */
-
 .fileText,
 .summary {
   font-size: " + (($SS.conf["Font Size"] < 13) ? 10 : ($SS.conf["Font Size"] - 2)) + "px !important;
 }
-
 /* Anything we need !important */
-
 .qr-link {
   font-size: 14px !important;
 }
-
 /* Options */
-
 .tab-label,
 .options-button,
 .theme-preview,
@@ -32,23 +25,17 @@
   font-family: sans-serif !important;
   font-size: 12px !important;
 }
-
 /* Board Title */
-
 .boardBanner .boardTitle {
   font-weight: 400 !important;
   font-size: " + (($SS.conf["Font Size"] < 13) ? 22 : 26) + "px !important;
 }
-
 /* Code Tags */
-
 .prettyprint span {
   font-family: monospace!important;
   font-size: medium!important;
 }
-
 /* Full board list */
-
 #full-board-list,
 body>#header-bar,
 #full-board-list .fourchanx-link {
@@ -59,9 +46,7 @@ body>#header-bar,
     word-spacing: " + (($SS.conf["Font Size"] < 14) ? -1 : -2) + "px;
   }
 }
-
 /* Everything else */
-
 body,
 .prev span::after,
 .prev form::after,
@@ -127,9 +112,7 @@ a.qr-link {
   overflow: hidden;
   padding-bottom: 2px;
 }
-
 /* Text decoration */
-
 :root.underline-disabled a {
   text-decoration: none !important;
 }
@@ -155,16 +138,16 @@ a.options-button,
 .closed {
   text-align: center;
 }
-
 /* Font weight */
-
 .name,
 .subject,
 .option.header .option-title,
-a.current {
+a.current,
+.tab-label.selected {
   font-weight: " + ($SS.conf["Bitmap Font"] ? 4 : 7) + "00 !important;
 }
-.qr-link {
+.qr-link,
+.tab-label:not(.selected):not(:hover) {
   font-weight: normal;
 }
 /* /f/ */
@@ -172,7 +155,6 @@ a.current {
   font-weight: 700;
 }
 /* Font Style */
-
 .summary {
   font-style: " + ($SS.conf["Bitmap Font"] ? 'none' : 'italic') + ";
 }
