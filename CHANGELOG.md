@@ -1,3 +1,16 @@
+### v1.0.24
+*2024-11-29*
+
+- StyleChan's options menu should now be more adaptive to the viewport
+- Increase visibility of options tabs
+
+**PR by @SystemPatch:**
+For cases where reply opacity is used, usually with a BG image:
+- 4Chan X/XT and Stylechan options will not use opacity for readability
+- Recolor even replies will use the opacity value, and not overwrite the post highlight when linked to.
+- Flash/Expired table will use recolored rows always, to prevent transparent rows
+- (per previous commit) Have table background disable when post is highlighted
+
 ### v1.0.23
 *2024-11-29*
 
