@@ -11,7 +11,26 @@
     "buildsPath": "builds/",
     "mainBranch": "main",
     "matches": [
-      "*://boards.4chan.org/*"
+      "*://boards.4chan.org/*",
+      "*://sys.4chan.org/*",
+      "*://boards.4channel.org/*",
+      "*://sys.4channel.org/*"
+    ],
+    "exclude_matches": [
+      "*://www.4chan.org/",
+      "*://www.4chan.org/*",
+      "*://www.4channel.org/",
+      "*://www.4channel.org/*",
+      "*://www.4chan.org/advertise",
+      "*://www.4chan.org/advertise?*",
+      "*://www.4chan.org/donate",
+      "*://www.4chan.org/donate?*",
+      "*://www.4channel.org/advertise",
+      "*://www.4channel.org/advertise?*",
+      "*://www.4channel.org/donate",
+      "*://www.4channel.org/donate?*",
+      "*://www.4channel.org/pass",
+      "*://www.4channel.org/pass?*"
     ],
     "files": {
       "metajs": "StyleChan.meta.js",
