@@ -9,29 +9,21 @@
 <%=
   (function() {
     function expand(items, regex, substitutions) {
-      var results = [];
-      items.forEach(function(item) {
-        if (regex.test(item)) {
-          substitutions.forEach(function(s) {
-            results.push(item.replace(regex, s));
-          });
-        } else {
-          results.push(item);
-        }
-      });
-      return results;
+      return items.flatMap(item => 
+        regex.test(item) 
+          ? substitutions.map(s => item.replace(regex, s)) 
+          : item
+      );
     }
+
     function expandMatches(matches) {
       return expand(matches, /^\*/, ['http', 'https']);
     }
-    return [].concat(
-      expandMatches(meta.matches).map(function(match) {
-        return '// @match        ' + match;
-      }),
-      expandMatches(meta.exclude_matches).map(function(match) {
-        return '// @exclude      ' + match;
-      })
-    ).join('\n');
+
+    return [
+      ...expandMatches(meta.matches).map(match => `// @match        ${match}`),
+      ...expandMatches(meta.exclude_matches).map(match => `// @exclude      ${match}`)
+    ].join('\n');
   })()
 %>
 // @grant        GM_getValue
