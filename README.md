@@ -10,9 +10,9 @@ Originally developed by [seaweedchan](https://github.com/seaweedchan/OneeChan), 
 
 #### Install instructions
 
-Installing [4chan X](https://github.com/ccd0/4chan-x) is **REQUIRED** for StyleChan to work.
+Installing [4chan X](https://github.com/ccd0/4chan-x) or [4chan XT](https://github.com/TuxedoTako/4chan-xt)  is **REQUIRED** for StyleChan to work.
 
-- In 4chan X **enable**: Quick Reply, Persistent QR and Auto Hide QR.
+- In 4chan X **enable**: Quick Reply > Persistent QR > Auto Hide QR.
 
 - Firefox: Requires the [Violentmonkey](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/) addon.
 - Chrom*: Requires the [Violentmonkey](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag/) extension.
@@ -30,4 +30,4 @@ Installing [4chan X](https://github.com/ccd0/4chan-x) is **REQUIRED** for StyleC
 
 - [Changelog](https://github.com/3nly/StyleChan/blob/main/CHANGELOG.md)
 - [Contributing](https://github.com/3nly/StyleChan/blob/main/CONTRIBUTING.md)
-- [Reporting Bugs](https://github.com/3nly/StyleChan/issues)
+- [Reporting Bugs](https://github.com/3nly/StyleChan/blob/main/CONTRIBUTING.md#reporting-bugs-and-suggestions)
