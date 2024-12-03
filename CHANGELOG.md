@@ -1,3 +1,9 @@
+### v1.0.25
+*2024-12-03*
+
+- Remove 4channel from meta
+- Margins will no longer apply to the report window
+
 ### v1.0.24
 *2024-11-29*
 
