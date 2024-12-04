@@ -6,7 +6,6 @@
   pointer-events: none;
 }
 /* End */
-
 .sjis {
   font-size: 16px;
   line-height: 17px;
@@ -49,11 +48,11 @@ div.op.post div.file .fileThumb {
 
 .fixed.bottom-header.is_thread body {
   padding-bottom: 0em;
-  padding-top: 0.5em;
+  padding-top: .5em;
 }
 .fixed.bottom-header.is_index body {
   padding-bottom: 4.5em;
-  padding-top: 0.5em;
+  padding-top: .5em;
 }
 .fixed.bottom-header.is_catalog body,
 .fixed.bottom-header.catalog-mode body {
@@ -61,7 +60,7 @@ div.op.post div.file .fileThumb {
   padding-top: .5em;
 }
 .fixed.bottom-header body {
-  padding-top: 0.5em;
+  padding-top: .5em;
 }
 :root.is_index.bottom-header:not(.autohide) body {
   padding-bottom: 5em !important;
@@ -164,7 +163,7 @@ table {
   text-align: center !important;
 }
 .adl {
-    font-size: .76em;
+  font-size: .76em;
 }
 #qf-box {
   width: 120px;
@@ -173,9 +172,7 @@ span.hide-announcement {
   margin-left: 3px;
   vertical-align: sub;
 }
-
 /* Bottom Controls */
-
 .bottomCtrl.desktop {
   float: right;
 }

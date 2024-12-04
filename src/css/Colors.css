@@ -75,10 +75,10 @@ a.current {
   color: " + $SS.theme.headerLHColor.hex + " !important;
 }
 #custom-board-list .current {
-    border-bottom: 1px solid rgba(" + $SS.theme.linkColor.rgb + ",1) !important;;
+  border-bottom: 1px solid rgba(" + $SS.theme.linkColor.rgb + ",1) !important;;
 }
 #custom-board-list .current:hover {
-    border-bottom: 1px solid rgba(" + $SS.theme.linkHColor.rgb + ",1) !important;;
+  border-bottom: 1px solid rgba(" + $SS.theme.linkHColor.rgb + ",1) !important;;
 }
 /* Greentext */
 .postMessage>.quote,
