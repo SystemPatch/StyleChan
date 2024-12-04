@@ -90,12 +90,6 @@ a.qr-link {
 .backlink {
   font-size: " + $SS.conf["Backlink Font Size"] + "px !important;
 }
-:root.info-on-hover .postNum {
-  font-size: 0 !important;
-}
-:root.info-on-hover .postContainer:hover .postNum {
-  font-size: " + $SS.conf["Font Size"] + "px !important;
-}
 #qr-file-button,
 #qr input[type=submit],
 #qr label,
