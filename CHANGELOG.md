@@ -1,3 +1,9 @@
+### v1.0.26
+*2024-12-04*
+
+- Use a different icon for 4chan XT
+- StyleChan will no longer apply CSS to 404 page
+
 ### v1.0.25
 *2024-12-03*
 
