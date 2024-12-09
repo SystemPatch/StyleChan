@@ -252,6 +252,7 @@ hr {
 :root.rounded-corners #updater,
 :root.rounded-corners #menu,
 :root.rounded-corners .thumb,
+:root.rounded-corners #bannerCnt img,
 :root.rounded-corners .fileThumb img:not(.full-image),
 :root.rounded-corners .catalog-thumb,
 :root.rounded-corners .dd-menu ul,
