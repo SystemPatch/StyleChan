@@ -189,7 +189,8 @@ select[name='Font Family']>option {
   width:100%;
 }
 #add-theme>label#customCSS>textarea {
-  height: 9.5em;
+  font-family: monospace;
+  height: 10.2em;
   resize: none;
   width: 99%;
   max-height: 25em;
