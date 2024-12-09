@@ -250,6 +250,7 @@ hr {
 .boardBanner .boardTitle {
   cursor:default;
   letter-spacing:-2px;
+  padding-top: .1em;
 }
 /* Banner */
 #bannerCnt {
