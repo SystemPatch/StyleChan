@@ -93,7 +93,7 @@
             "Expanding Form Inputs": [true, "Makes certain form elements expand on focus."],
             ":: Replies": ["header", ""],
             "Fit Width": [true, "Replies stretch to the width of the page."],
-            "Fit Expanded Images": [false, "Expanded images will better fit to the viewport."],
+            "Fit Expanded Images": [false, "Expanded images will better fit to the viewport. Enable 'Fit height' in 4chan X's header menu to use."],
             "Show Reply Header": [true, "Shows reply header background and line border."],
             "Show File Info": [true, "Hides filename, dimensions and size info."],
             "Underline QuoteLinks": [false, "Underlines quotelinks only."],
