@@ -90,6 +90,7 @@
             "Transparent QR": [false, "Reduces opacity of the QR box."],
             "Remove Background": [false, "Removes the QR background."],
             "Remove Controls": [false, "Removes the QR controls and checkbox."],
+            "Animated Transition": [true, "Enables a transition animation for the QR."],
             "Expanding Form Inputs": [true, "Makes certain form elements expand on focus."],
             ":: Replies": ["header", ""],
             "Fit Width": [true, "Replies stretch to the width of the page."],
@@ -2573,6 +2574,7 @@
                 $("html").optionClass("Allow Wrapping Around OP", false, "force-wrapping");
                 $("html").optionClass("OP Background", true, "op-background");
                 $("html").optionClass("Expanding Form Inputs", true, "expand-inputs");
+                $("html").optionClass("Animated Transition", true, "qr-transition");
                 $("html").optionClass("Show Header Background Gradient", true, "header-gradient");
                 $("html").optionClass("Show Header Shadow", false, "header-shadow");
                 $("html").optionClass("Highlight Current Board", false, "header-highlight");

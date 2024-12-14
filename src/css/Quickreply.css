@@ -155,6 +155,8 @@
 }
 :root.vertical-qr #qr {
   transform: translateX(100%);
+}
+:root.qr-transition.vertical-qr #qr {
   transition: transform .3s ease-in-out .1s !important;
 }
 :root.vertical-qr #qr .move {
