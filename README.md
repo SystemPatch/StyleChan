@@ -29,5 +29,5 @@ Installing [4chan X](https://github.com/ccd0/4chan-x) or [4chan XT](https://gith
 #### Development & Contribution
 
 - [Changelog](https://github.com/3nly/StyleChan/blob/main/CHANGELOG.md)
-- [Contributing](https://github.com/3nly/StyleChan/blob/main/CONTRIBUTING.md)
+- [Contributing](https://github.com/3nly/StyleChan/blob/main/CONTRIBUTING.md#development--contribution)
 - [Reporting Bugs](https://github.com/3nly/StyleChan/blob/main/CONTRIBUTING.md#reporting-bugs-and-suggestions)
