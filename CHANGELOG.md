@@ -1,3 +1,21 @@
+### v1.0.27
+*2024-12-14*
+
+- Add option for QR transition
+
+**PR by @SystemPatch:**
+- Set file type for theme import
+- Add field class to CustomCSS textarea
+- Adjust textbox color transitions
+- Prevent inline posts from getting recolored
+- Fix padding around inline reply header
+- Add some padding-top for board title
+- Extend edge of SS-like sidebar into header
+- Add banner into rounded corners
+- Clarify description for expanded images option
+- Fix large unified thumbnails for native catalog
+- Get QR transitions working again 
+
 ### v1.0.26
 *2024-12-04*
 
