@@ -155,7 +155,7 @@
 }
 :root.vertical-qr #qr {
   transform: translateX(100%);
-  transition: transform .3s ease-in-out .1s;
+  transition: transform .3s ease-in-out .1s !important;
 }
 :root.vertical-qr #qr .move {
   transform: rotate(-90deg);
@@ -170,7 +170,7 @@
 }
 :root.fade-qr #qr.autohide:not(.focus):not(:hover) {
   opacity: 0.2 !important;
-  transition: opacity .2s ease-in-out 1s;
+  transition: opacity .2s ease-in-out 1s !important;
 }
 /* Oekaki */
 input[type="number"] {
