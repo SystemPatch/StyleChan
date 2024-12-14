@@ -93,7 +93,7 @@
             "Expanding Form Inputs": [true, "Makes certain form elements expand on focus."],
             ":: Replies": ["header", ""],
             "Fit Width": [true, "Replies stretch to the width of the page."],
-            "Fit Expanded Images": [false, "Expanded images will better fit to the viewport."],
+            "Fit Expanded Images": [false, "Expanded images will better fit to the viewport. Enable 'Fit height' in 4chan X's header menu to use."],
             "Show Reply Header": [true, "Shows reply header background and line border."],
             "Show File Info": [true, "Hides filename, dimensions and size info."],
             "Underline QuoteLinks": [false, "Underlines quotelinks only."],
@@ -1245,7 +1245,7 @@
                     p = $("<p class='buttons-container'>");
 
                 p.append($("<a class='options-button' name=addTheme title='Create a new theme.'>Create", tOptions).bind("click", $SS.options.showTheme));
-                p.append($("<div id='import-link' title='Import a new theme (.json) file.'>").append($("<input type=file class='import-input' riced=true>")
+                p.append($("<div id='import-link' title='Import a new theme file.'>").append($("<input type=file class='import-input' riced=true accept='application/json'>")
                     .bind("change", function() {
                         var file = this.files[0],
                             reader = new FileReader(),
@@ -1470,7 +1470,7 @@
                     innerHTML += "<label><span class='option-title'>" + themeInputs[i].dName + ":</span>" +
                     "<input type=text class=jsColor name=" + themeInputs[i].name + " value=" + (bEdit ? tEdit[themeInputs[i].name] : "") + "></label>";
 
-                innerHTML += "<label id=customCSS><span class='option-title'>Custom CSS:</span><textarea name=customCSS>" + (bEdit ? tEdit.customCSS || "" : "") + "</textarea>" +
+                innerHTML += "<label id=customCSS><span class='option-title'>Custom CSS:</span><textarea name=customCSS class='field'>" + (bEdit ? tEdit.customCSS || "" : "") + "</textarea>" +
                     "</label><div>" +
                     "<a class='options-button' name=export>Export</a>" +
                     "<a class='options-button' name=" + (bEdit ? "edit" : "add") + ">Save</a><a class='options-button' name=cancel>Cancel</a></div>";
