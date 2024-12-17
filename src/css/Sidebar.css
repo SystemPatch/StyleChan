@@ -91,7 +91,7 @@
 :root.mini-sidebar .boardTitle {
   top: 72px !important;
   width: inherit !important;
-  letter-spacing: -1px;
+  letter-spacing: -1.4px;
   position: fixed;
   padding-top: .05em;
 }
