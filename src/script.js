@@ -2537,6 +2537,14 @@
 
         classes: {
             init: function() {
+                /* Set native 4chan theme to mitigate unloaded CSS flashbang #6 */
+                if ($SS.theme.bgColor.isLight) {
+                    document.cookie = "nws_style=Photon;domain=.4chan.org;path=/";
+                    document.cookie = "ws_style=Photon;domain=.4chan.org;path=/";
+                } else {
+                    document.cookie = "nws_style=Tomorrow;domain=.4chan.org;path=/";
+                    document.cookie = "ws_style=Tomorrow;domain=.4chan.org;path=/";
+                }
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
                 $SS.theme.textColor.isLight ? $("html").addClass("isLight") : "";
