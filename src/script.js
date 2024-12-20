@@ -93,7 +93,8 @@
             "Animated Transition": [true, "Enables a transition animation for the QR."],
             "Expanding Form Inputs": [true, "Makes certain form elements expand on focus."],
             ":: Replies": ["header", ""],
-            "Fit Width": [true, "Replies stretch to the width of the page."],
+            "Fit Width": [true, "Replies stretch to the width of the page.", null, true],
+            "Fit Post Menu": [false, "Sets the post menu to the right.", "Fit Width", true, true],
             "Fit Expanded Images": [false, "Expanded images will better fit to the viewport. Enable 'Fit height' in 4chan X's header menu to use."],
             "Show Reply Header": [true, "Shows reply header background and line border."],
             "Show File Info": [true, "Hides filename, dimensions and size info."],
@@ -246,7 +247,7 @@
                     value:"Garamond"
                 }]
             ],
-            "Font Size": [13, "Set the general size of text (Pixels). Min: 10px, Max: 18px"],
+            "Font Size": [13, "Set the font size of text (in pixels). Min: 10px, Max: 18px"],
             "Backlink Font Size": [10, "Set the font size of backlinks."],
             "Bitmap Font": [false, "Check this if you are using a bitmap font."],
             "Themes": [],
@@ -2326,6 +2327,7 @@
                 authorName: "Seaweed",
                 authorTrip: "!!lq+3fff+/ev",
                 "default": true,
+                bgImg: false,
                 replyOp: "1.0",
                 navOp: "0.9",
                 bgColor: "20211c",
@@ -2359,6 +2361,7 @@
                 authorName: "Seaweed",
                 authorTrip: "!!lq+3fff+/ev",
                 "default": true,
+                bgImg: false,
                 replyOp: "1.0",
                 navOp: "0.9",
                 bgColor: "e9eced",
@@ -2392,6 +2395,7 @@
                 authorName: "Leagle",
                 authorTrip: "!YoGiiH6Oi.",
                 "default": true,
+                bgImg: false,
                 replyOp: "1.0",
                 navOp: "0.9",
                 mainColor: "222222",
@@ -2426,6 +2430,7 @@
                 authorName: "Kori",
                 authorTrip: "!STRaW/KORI",
                 "default": true,
+                bgImg: false,
                 replyOp: "1.0",
                 navOp: "0.9",
                 mainColor: "fcfcfc",
@@ -2459,6 +2464,7 @@
                 authorName: "iluvOP",
                 authorTrip: "!Tripfags can die.",
                 "default": true,
+                bgImg: false,
                 replyOp: "1.0",
                 navOp: "0.9",
                 mainColor: "242436",
@@ -2493,6 +2499,7 @@
                 authorName: "Zixaphir",
                 authorTrip: "!M.........",
                 "default": true,
+                bgImg: false,
                 replyOp: "1.0",
                 navOp: "0.9",
                 mainColor: "1c1c1c",
@@ -2537,14 +2544,6 @@
 
         classes: {
             init: function() {
-                /* Set native 4chan theme to mitigate unloaded CSS flashbang #6 */
-                if ($SS.theme.bgColor.isLight) {
-                    document.cookie = "nws_style=Photon;domain=.4chan.org;path=/";
-                    document.cookie = "ws_style=Photon;domain=.4chan.org;path=/";
-                } else {
-                    document.cookie = "nws_style=Tomorrow;domain=.4chan.org;path=/";
-                    document.cookie = "ws_style=Tomorrow;domain=.4chan.org;path=/";
-                }
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
                 $SS.theme.textColor.isLight ? $("html").addClass("isLight") : "";
@@ -2553,7 +2552,8 @@
                 $("html").optionClass("Underline All Links", false, "underline-disabled");
                 $("html").optionClass("Rounded Corners", true, "rounded-corners");
                 $("html").optionClass("Show Board Name", false, "hide-board-name");
-                $("html").optionClass("Fit Width", true, "reply-fit-width");
+                $("html").optionClass("Fit Width", true, "fit-width");
+                $("html").optionClass("Fit Post Menu", true, "fit-postmenu");
                 $("html").optionClass("Show Banner", false, "hide-banner");
                 $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
                 $("html").optionClass("Show Reply to Thread Button", false, "hide-button");
