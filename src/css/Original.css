@@ -3,9 +3,10 @@
   left: 0;
   margin-left: -11px;
   padding-left: " + $SS.conf["Margin Left"] + "px;
-  margin-top: -77px;
+  margin-top: -75px;
   position: absolute;
   pointer-events: none;
+  z-index: 1;
 }
 :root.force-indent .party-hat {
   margin-left: -23px;
