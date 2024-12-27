@@ -59,3 +59,8 @@ select,
 a {
   outline: 0 !important
 }
+/* Hide useless Christmas ornament */
+.boardBanner {
+  border-image-source: none !important;
+  border-style: none !important;
+}
