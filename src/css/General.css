@@ -55,18 +55,18 @@ div.post {
   max-height: calc(100vh - 8rem) !important;
 }
 /* Fit Width option */
-:root.fit-width .reply.post {
+:root.reply-fit-width .reply.post {
   display: block !important;
 }
-:root.fit-width .stub ~ .reply.post {
+:root.reply-fit-width .stub ~ .reply.post {
   display: none !important;
 }
 .hasInline .inline>.replyContainer:not(.expanded-image):not(.hasInline) .reply.post,
-:root.fit-width .post.reply {
+:root.reply-fit-width .post.reply {
   overflow: hidden !important;
 }
-:root.fit-width .expanded-image>.post::after,
-:root.fit-width .hasInline>.reply.post::after {
+:root.reply-fit-width .expanded-image>.post::after,
+:root.reply-fit-width .hasInline>.reply.post::after {
   clear: both !important;
   content: '' !important;
   display: block !important;
@@ -106,28 +106,28 @@ div.post {
   position: relative;
   bottom: 1px;
 }
-:root.fit-width .reply .container {
+:root.reply-fit-width .reply .container {
   padding-right: 5px;
 }
-:root.fit-width.fit-postmenu .menu-button {
+:root.reply-fit-width.fit-postmenu .menu-button {
   float: right !important;
 }
 .menu-button + .container:not(:empty),
-.menu-button.active + .container:not(:empty) {
+.container {
   margin-left: 4px !important;
 }
-:root.fit-width .post .menu-button {
+:root.reply-fit-width .post .menu-button {
   margin-left: 0;
   position: relative;
   left: 5px;
 }
-:root.fit-width .post .menu-button {
+:root.reply-fit-width .post .menu-button {
   opacity: 0;
 }
-:root.fit-width .post:not(:hover) .menu-button {
+:root.reply-fit-width .post:not(:hover) .menu-button {
   transition: opacity .3s ease-out 0s !important;
 }
-:root.fit-width .post:hover .menu-button {
+:root.reply-fit-width .post:hover .menu-button {
   opacity: 1;
   transition: opacity .3s ease-in .1s !important;
 }
@@ -237,7 +237,7 @@ hr {
   width: 600px;
   border: none !important;
 }
-:root.fit-width #unread-line {
+:root.reply-fit-width #unread-line {
   margin: auto;
   width: 100%;
 }
@@ -290,7 +290,7 @@ hr {
   margin-left: 18px;
   margin-bottom: 15px;
 }
-:root.fit-width .pagelist {
+:root.reply-fit-width .pagelist {
   margin-left: 0;
 }
 .pages a {

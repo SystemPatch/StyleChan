@@ -44,6 +44,7 @@
                 0, "Right margin custom width (pixels).", "Right Margin", 999, true
             ],
             "Rounded Corners": [true, "Styles replies, menus and Quick Reply to have subtly rounded corners."],
+            "Invert Spoiler": [false, "Inverts colors for text spoilers."],
             "Underline All Links": [false, "Underlines all links in the page."],
             "Show Banner": [false, "Toggle visibility of the banner.", null, true],
             "Reduce Banner Opacity": [false, "Reduce opacity of the banner for easier viewing.", "Show Banner", true, true],
@@ -2544,6 +2545,11 @@
 
         classes: {
             init: function() {
+                /* Set native 4chan theme to mitigate unloaded CSS flashbang #6 */
+                const nativeTheme = $SS.theme.bgColor.isLight ? "Yotsuba B New" : "Tomorrow";
+                document.cookie = "nws_style=" + nativeTheme + ";domain=.4chan.org;path=/";
+                document.cookie = "ws_style=" + nativeTheme + ";domain=.4chan.org;path=/";
+
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
                 $SS.theme.textColor.isLight ? $("html").addClass("isLight") : "";
@@ -2552,7 +2558,7 @@
                 $("html").optionClass("Underline All Links", false, "underline-disabled");
                 $("html").optionClass("Rounded Corners", true, "rounded-corners");
                 $("html").optionClass("Show Board Name", false, "hide-board-name");
-                $("html").optionClass("Fit Width", true, "fit-width");
+                $("html").optionClass("Fit Width", true, "reply-fit-width");
                 $("html").optionClass("Fit Post Menu", true, "fit-postmenu");
                 $("html").optionClass("Show Banner", false, "hide-banner");
                 $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
@@ -2569,6 +2575,7 @@
                 $("html").optionClass("SS-like Sidebar", true, "ss-sidebar");
                 $("html").optionClass("Minimal Sidebar", true, "mini-sidebar");
                 $("html").optionClass("Recolor Even Replies", true, "recolor-even");
+                $("html").optionClass("Invert Spoiler", true, "alt-spoiler");
                 $("html").optionClass("Backlink Icons", true, "backlink-icon");
                 $("html").optionClass("Backlink Shadow", true, "backlink-shadow");
                 $("html").optionClass("Show 4chan Pass users", true, "no-pu");

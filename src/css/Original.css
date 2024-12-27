@@ -134,14 +134,14 @@ span.spoiler,
 s,
 s:not(:hover)>a,
 s:not(:hover)>.linkify {
-  color: #000 !important;
-  background: none repeat scroll 0 0 #000 !important;
+  color: #000;
+  background: none repeat scroll 0 0 #000;
 }
 span.spoiler:hover,
 s:hover,
 span.spoiler:focus,
 s:focus {
-  color: #fff !important;
+  color: #fff;
 }
 #globalMessage,
 .boardBanner {
