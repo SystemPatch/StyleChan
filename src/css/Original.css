@@ -94,10 +94,10 @@ div.post {
   margin: 4px 0;
   overflow: hidden;
 }
-:root:not(.fit-width) #delform div.reply:not([hidden]) {
+:root:not(.reply-fit-width) #delform div.reply:not([hidden]) {
   display: table !important;
 }
-:root:not(.fit-width) #delform .stub~div.reply:not([hidden]) {
+:root:not(.reply-fit-width) #delform .stub~div.reply:not([hidden]) {
   display: none !important;
 }
 div.thread {
