@@ -68,6 +68,8 @@
 /* Vertical QR */
 :root.vertical-qr:root.left-sidebar #qr {
   transform: translateX(-100%);
+  left: 0 !important;
+  right: auto !important;
 }
 :root.vertical-qr:root.left-sidebar #qr .move {
   transform: rotate(90deg);
