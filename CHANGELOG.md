@@ -1,3 +1,17 @@
+### v1.0.28
+*2024-12-29*
+
+- New option: Invert Spoiler (under Main Rice) (#7)
+- New option: Fit Post Menu (only available when Fit Width is enabled) (#8)
+- Fix for post menu slightly moving position when menu is opened
+- Fix for certain board titles being cut off when Minimal Sidebar is enabled
+- Fix for Vertical Tab QR breaking when Sidebar is disabled (#10)
+- Potential fixes to flashing of unstyled content when loading a 4chan page (#6)
+
+**PR by @SystemPatch:**
+- Party hats will stick to OP now.
+
+
 ### v1.0.27
 *2024-12-14*
 
