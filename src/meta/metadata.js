@@ -36,7 +36,7 @@
 // @grant        GM.deleteValue
 // @grant        GM.listValues
 // @grant        GM.openInTab
-// @run-at       document-start
+// @run-at       document-body
 // @updateURL    <%= meta.downloads %><%= meta.files.metajs %>
 // @downloadURL  <%= meta.downloads %><%= meta.files.userjs %>
 // @icon         data:image/png;base64,<%= grunt.file.read('src/img/icon48.png', {encoding: 'base64'}) %>
