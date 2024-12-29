@@ -21,8 +21,6 @@
   "permissions": [
     "storage",
     "*://boards.4chan.org/*",
-    "*://sys.4chan.org/*",
-    "*://boards.4channel.org/*",
-    "*://sys.4channel.org/*"
+    "*://sys.4chan.org/*"
   ]
 }
