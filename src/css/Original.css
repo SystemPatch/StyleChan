@@ -201,8 +201,8 @@ span.hide-announcement {
   filter: invert(100%);
   -webkit-filter: invert(100%);
 }
-/* Accommodate Oneechan icon in header */
-.centered-links:root #shortcuts {
+/* Accommodate StyleChan icon in header */
+:root.centered-links #shortcuts {
   width: 30vw !important;
 }
 :root.centered-links #custom-board-list {

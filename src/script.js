@@ -945,7 +945,7 @@
             if ($SS.location.dead)
                 return;
             else if (reload || $("link[rel=stylesheet]", document.head).exists())
-                $(document).unbind("DOMNodeInserted", $SS.insertCSS);
+                $(document).unbind("MutationObserver", $SS.insertCSS);
 
             css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\(^\")/g, '') %>";
 
