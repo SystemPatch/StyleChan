@@ -1,3 +1,9 @@
+### v1.0.29
+*2024-12-30*
+
+- Fix for Fit Post Menu applying to the catalog
+- Fix for weird interaction from issue #6
+
 ### v1.0.28
 *2024-12-29*
 
