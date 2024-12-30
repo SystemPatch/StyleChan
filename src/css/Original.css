@@ -154,8 +154,7 @@ div.sideArrows {
   margin-left: 2px;
   opacity: .3;
 }
-hr,
-#boardNavDesktopFoot {
+hr {
   clear: both;
 }
 table {

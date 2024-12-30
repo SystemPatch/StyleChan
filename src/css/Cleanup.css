@@ -4,6 +4,7 @@
 .tab-select:not(:checked)+div,
 iframe[src='about:blank'],
 #absbot,
+#boardNavDesktopFoot,
 .stylechanger,
 #styleSwitcher,
 :root:not(.show-ads) .center,
