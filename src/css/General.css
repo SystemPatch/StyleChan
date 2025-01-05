@@ -405,3 +405,7 @@ select {
   word-break: break-word;
   margin-bottom: 15px; /* unrelated to issue #90 */
 }
+/* Report form */
+#reportTypes {
+  margin-top: 5px;
+}
