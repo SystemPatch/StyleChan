@@ -387,13 +387,12 @@ body.is_thread div.navLinks:not(.navLinksBot) {
   transition: color .25s, border-color .25s, width .25s;
 }
 /* Thumb Opacity */
-:root.thumb-opacity .fileThumb {
+:root.thumb-opacity .fileThumb img:not(.full-image) {
   opacity: .5;
   transition: opacity .3s ease-out 0s;
 }
-:root.thumb-opacity .fileThumb:hover {
+:root.thumb-opacity .fileThumb img:not(.full-image):hover {
   opacity: 1.0;
-  transition: opacity .3s ease-in 0s;
 }
 /* Selection Lists */
 select {
