@@ -51,16 +51,15 @@ div.op.post div.file .fileThumb {
 }
 
 /* Padding according to header position */
-
-.fixed.bottom-header.is_thread body {
+.fixed.bottom-header body.is_thread {
   padding-bottom: 0em;
   padding-top: .5em;
 }
-.fixed.bottom-header.is_index body {
+.fixed.bottom-header body.is_index {
   padding-bottom: 4.5em;
   padding-top: .5em;
 }
-.fixed.bottom-header.is_catalog body,
+.fixed.bottom-header body.is_catalog,
 .fixed.bottom-header.catalog-mode body {
   padding-bottom: 3em;
   padding-top: .5em;
@@ -68,21 +67,21 @@ div.op.post div.file .fileThumb {
 .fixed.bottom-header body {
   padding-top: .5em;
 }
-:root.is_index.bottom-header:not(.autohide) body {
+:root.bottom-header:not(.autohide) body.is_index {
   padding-bottom: 5em !important;
 }
-.fixed.top-header.is_index body {
+.fixed.top-header body.is_index {
   padding-bottom: 2.5em;
-  padding-top: " + (($SS.conf[" Font Size"] <= 11) ? 3.2 : 2.4) + " em !important;
+  padding-top: " + (($SS.conf["Font Size"] <= 11) ? 3.2 : 2.4) + "em !important;
 }
-.fixed.top-header.is_thread body {
+.fixed.top-header body.is_thread {
   padding-bottom: 0;
-  padding-top: " + (($SS.conf[" Font Size"] <= 11) ? 3.2 : 2.4) + " em !important;
+  padding-top: " + (($SS.conf["Font Size"] <= 11) ? 3.2 : 2.4) + "em !important;
 }
-.fixed.top-header.is_catalog body,
+.fixed.top-header body.is_catalog,
 .fixed.top-header.catalog-mode body {
   padding-bottom: .5em;
-  padding-top: " + (($SS.conf[" Font Size"] <= 11) ? 3.2 : 2.4) + " em !important;
+  padding-top: " + (($SS.conf["Font Size"] <= 11) ? 3.2 : 2.4) + "em !important;
 }
 .fixed.top-header.autohide body {
   padding-top: 2em !important;
@@ -181,13 +180,13 @@ span.hide-announcement {
 .bottomCtrl.desktop {
   float: right;
 }
-.fixed.bottom-header.is_index .bottomCtrl.desktop,
-.fixed.bottom-header.is_thread .bottomCtrl.desktop {
+.fixed.bottom-header body.is_index .bottomCtrl.desktop,
+.fixed.bottom-header body.is_thread .bottomCtrl.desktop {
   float: right;
   margin-bottom: 35px;
 }
-.fixed.top-header.is_thread .bottomCtrl.desktop,
-.fixed.top-header.is_index .bottomCtrl.desktop {
+.fixed.top-header body.is_thread .bottomCtrl.desktop,
+.fixed.top-header body.is_index .bottomCtrl.desktop {
   float: right;
   margin-bottom: 8px;
 }
