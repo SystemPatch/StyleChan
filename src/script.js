@@ -45,7 +45,9 @@
             ],
             "Rounded Corners": [true, "Styles replies, menus and Quick Reply to have subtly rounded corners."],
             "Invert Spoiler": [false, "Inverts colors for text spoilers."],
-            "Underline All Links": [false, "Underlines all links in the page."],
+            "Underline All Links": [false, "Underlines all links in the page."],            
+            "Show 4chan Pass Users": [true, "Show a four leaf clover indicating a pass user."],
+            "Show 4chan Pass Login": [false, "Show a link to login with your 4chan pass. Please reload page."],
             "Show Banner": [false, "Toggle visibility of the banner.", null, true],
             "Reduce Banner Opacity": [false, "Reduce opacity of the banner for easier viewing.", "Show Banner", true, true],
             "Show Board Name": [true, "Toggle visibility of the board name."],
@@ -107,7 +109,6 @@
             "Reduce Thumbnail Opacity": [false, "Reduces opacity of thumbnails."],
             "Backlink Icons": [false, "Use icons for backlinks instead of text."],
             "Backlink Shadow": [false, "Add a shadow to the backlink text."],
-            "Show 4chan Pass users": [true, "Show a four leaf clover indicating a pass user."],
             "Borders": [
                 2, "Changes which sides of replies have borders.", [{
                     name: "Normal (4chan default)",
@@ -865,6 +866,16 @@
                     $(".bottomad.center").remove();
                     $("#danbo-s-b.danbo-slot").remove();
                 }
+                // 4chan Pass Link
+                if ($SS.conf["Show 4chan Pass Login"]) {
+                    const link = $("<span class='brackets-wrap pass-link-container pass-login'><a title='4chan Pass login' href='javascript:;'>4chan Pass</a></span>").bind("click", function(event) {
+                        // Prevent the default link behavior
+                        event.preventDefault();
+                        // Open the link in a new window with custom size
+                        window.open('https://sys.4chan.org/auth', '_blank', 'width=502,height=346')
+                    });
+                    $(".navLinks.desktop").append(link);                    
+                };
 
                 // things that need to change after 4chan X loads.
                 setTimeout(function() {
@@ -2576,12 +2587,13 @@
                     $("html").optionClass("Sidebar Position", 2, "left-sidebar");
                     $("html").optionClass("SS-like Sidebar", true, "ss-sidebar");
                     $("html").optionClass("Minimal Sidebar", true, "mini-sidebar");
-                }
+                };
                 $("html").optionClass("Recolor Even Replies", true, "recolor-even");
                 $("html").optionClass("Invert Spoiler", true, "alt-spoiler");
                 $("html").optionClass("Backlink Icons", true, "backlink-icon");
                 $("html").optionClass("Backlink Shadow", true, "backlink-shadow");
-                $("html").optionClass("Show 4chan Pass users", true, "no-pu");
+                $("html").optionClass("Show 4chan Pass Users", true, "no-pu");
+                $("html").optionClass("Show 4chan Pass Login", true, "pass-login");
                 $("html").optionClass("Fit Expanded Images", true, "fit-eximg");
                 $("html").optionClass("Autohide Style", 2, "vertical-qr");
                 $("html").optionClass("Autohide Style", 3, "fade-qr");
