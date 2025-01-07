@@ -190,10 +190,18 @@ span.hide-announcement {
   float: right;
   margin-bottom: 8px;
 }
+/* Index Navigation */
+input[value='Next'],
+input[value='Previous'] {
+  padding: 4px;
+}
 /* Other */
 #navlinks {
   top: 135px;
   right: 10px;
+}
+#ctrl-top {
+  margin: 5px 0 5px 0;
 }
 :root.isLight img[src*='//boards.4chan.org/js/jsMath/fonts/'] {
   filter: invert(100%);

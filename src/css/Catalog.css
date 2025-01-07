@@ -18,11 +18,15 @@
   margin-left: 12px;
   border-radius: 3px;
 }
-.pages.cataloglink a {
+.pages.cataloglink a,
+input[value='Next'],
+input[value='Previous'] {
   color: " + $SS.theme.textColor.hex + " !important;
   font-weight: bold;
 }
-.pages.cataloglink a:hover {
+.pages.cataloglink a:hover,
+input[value='Next']:hover,
+input[value='Previous']:hover {
   color: " + $SS.theme.textColor.hex + " !important;
   opacity: 0.7 !important;
   transition: opacity .3s ease-in 0s;

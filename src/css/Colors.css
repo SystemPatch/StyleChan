@@ -50,7 +50,9 @@ body.is_catalog .button,
   color: " + $SS.theme.linkColor.hex + " !important;
 }
 a.summary,
-.pages strong>a {
+.pages strong>a,
+input[value='Next'],
+input[value='Previous'] {
   color: " + $SS.theme.textColor.hex + " !important;
 }
 #header-bar #notifications a {
@@ -183,7 +185,9 @@ body.is_catalog .panel,
 .options-button:hover,
 .import-input:hover + .options-button,
 .pages strong>a:hover,
-.dd-menu li:hover {
+.dd-menu li:hover,
+input[value='Next']:hover,
+input[value='Previous']:hover {
   background:rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ");
 }
 .focused.entry {
@@ -314,7 +318,9 @@ select,
 .options-button,
 .qr-link,
 .pages.cataloglink,
-.pages strong>a {
+.pages strong>a,
+input[value='Next'],
+input[value='Previous'] {
   border-style: solid;
   border-width: 1px;
   border-color: rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-30) + ") !important;

@@ -279,10 +279,14 @@ hr {
   transition: opacity .3s ease-in 0s;
 }
 /* Pages */
-.pages strong>a {
+.pages strong>a,
+input[value='Next'],
+input[value='Previous'] {
   border-radius: 3px;
 }
-.pages strong>a:hover {
+.pages strong>a:hover,
+input[value='Next']:hover,
+input[value='Previous']:hover {
   opacity: .7 !important;
   transition: opacity .3s ease-in 0s;
 }
