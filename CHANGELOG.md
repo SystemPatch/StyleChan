@@ -1,3 +1,18 @@
+### v1.0.30
+*2025-01-07*
+
+- Add option to show 4chan Pass link
+- Style native catalog index buttons
+- Disable QR transition by default
+
+**PR by @SystemPatch:**
+- Prevent link color from overwriting spoiler
+- Native catalog thread margin
+- Option title line-height
+- Thumb opacity won't affect full inline images
+- Report page style
+- Several small fixes
+
 ### v1.0.29
 *2024-12-30*
 
