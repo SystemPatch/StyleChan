@@ -2559,8 +2559,8 @@
             init: function() {
                 /* Set native 4chan theme to mitigate unloaded CSS flashbang #6 */
                 const nativeTheme = $SS.theme.bgColor.isLight ? "Yotsuba B New" : "Tomorrow";
-                document.cookie = "nws_style=" + nativeTheme + ";domain=.4chan.org;path=/";
-                document.cookie = "ws_style=" + nativeTheme + ";domain=.4chan.org;path=/";
+                document.cookie = "nws_style=" + nativeTheme + ";domain=.4chan.org;samesite=strict;path=/";
+                document.cookie = "ws_style=" + nativeTheme + ";domain=.4chan.org;samesite=strict;path=/";
 
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
