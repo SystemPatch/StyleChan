@@ -93,7 +93,7 @@
             "Transparent QR": [false, "Reduces opacity of the QR box."],
             "Remove Background": [false, "Removes the QR background."],
             "Remove Controls": [false, "Removes the QR controls and checkbox."],
-            "Animated Transition": [true, "Enables a transition animation for the QR."],
+            "Animated Transition": [false, "Enables a transition animation for the QR."],
             "Expanding Form Inputs": [true, "Makes certain form elements expand on focus."],
             ":: Replies": ["header", ""],
             "Fit Width": [true, "Replies stretch to the width of the page.", null, true],
