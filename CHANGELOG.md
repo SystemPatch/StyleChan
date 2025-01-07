@@ -4,6 +4,7 @@
 - Add option to show 4chan Pass link
 - Style native catalog index buttons
 - Disable QR transition by default
+- Move 4chan Pass options to Main Rice
 
 **PR by @SystemPatch:**
 - Prevent link color from overwriting spoiler
