@@ -1,3 +1,8 @@
+### v1.0.31
+*2025-01-08*
+
+- Small fixes for errors in browser console regarding icons and cookie
+
 ### v1.0.30
 *2025-01-07*
 
