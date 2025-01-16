@@ -1,3 +1,9 @@
+### v1.0.32
+*2025-01-16*
+
+**PR by @SystemPatch:**
+- QR: Adjustments for recent XT update
+
 ### v1.0.31
 *2025-01-08*
 
