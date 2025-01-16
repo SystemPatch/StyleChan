@@ -79,7 +79,7 @@
             "Minimal Sidebar": [true, "Shrinks the sidebar and moves the banner."],
             ":: Quick Reply": ["header", ""],
             "Autohide Style": [
-                2, "Changes how the quick reply is hidden. Please enable Autohide QR in 4chan X. Vertical Tabbed only works with the sidebar enabled.", [{
+                2, "Changes how the quick reply is hidden. Please enable Autohide QR in 4chan X.", [{
                     name: "Normal",
                     value: 1
                 }, {
