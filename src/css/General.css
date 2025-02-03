@@ -20,9 +20,6 @@ body {
 .expanded-image {
   position: relative;
 }
-div.post {
-  margin: 4px 0;
-}
 :root.force-indent .op {
   margin-left: -12px;
 }
@@ -51,7 +48,7 @@ div.post {
   margin: 0 !important;
 }
 /* Fit Expanded Images option */
-:root.fit-eximg:root.fit-height .full-image {
+:root.fit-eximg.fit-height .full-image {
   max-height: calc(100vh - 8rem) !important;
 }
 /* Fit Width option */
@@ -210,8 +207,7 @@ input[type=checkbox]:checked+.riceCheck::before {
   margin-left: 2px;
 }
 :root.fixed:not(.autohide):not(.bottom) #globalMessage {
-  margin-top: 10px !important;
-  margin-bottom: 20px !important;
+  margin: 10px 0 20px !important;
 }
 .globalMessage, h2, h3 {
   margin: auto;
@@ -251,8 +247,8 @@ hr {
 }
 /* Board Title */
 .boardBanner .boardTitle {
-  cursor:default;
-  letter-spacing:-2px;
+  cursor: default;
+  letter-spacing: -2px;
   padding-top: .1em;
 }
 /* Banner */
@@ -275,8 +271,7 @@ hr {
   transition: opacity .3s ease-out 0s;
 }
 :root.banner-opacity #bannerCnt:hover {
-  opacity: 1.0 !important;
-  transition: opacity .3s ease-in 0s;
+  opacity: 1;
 }
 /* Pages */
 .pages strong>a,
@@ -287,8 +282,7 @@ input[value='Previous'] {
 .pages strong>a:hover,
 input[value='Next']:hover,
 input[value='Previous']:hover {
-  opacity: .7 !important;
-  transition: opacity .3s ease-in 0s;
+  opacity: .7;
 }
 .pagelist {
   margin-left: 18px;
@@ -364,8 +358,7 @@ body.board_f #delform .fileText {
 }
 :root.ad-opacity .center img:hover,
 :root.ad-opacity .danbo-slot:hover {
-  opacity: 1.0 !important;
-  transition: opacity .3s ease-in 0s;
+  opacity: 1;
 }
 /* Navlinks */
 body.is_index div.navLinks {
@@ -396,7 +389,7 @@ body.is_thread div.navLinks:not(.navLinksBot) {
   transition: opacity .3s ease-out 0s;
 }
 :root.thumb-opacity .fileThumb img:not(.full-image):hover {
-  opacity: 1.0;
+  opacity: 1;
 }
 /* Selection Lists */
 select {

@@ -68,7 +68,7 @@ body.is_catalog .button:hover,
   color: " + $SS.theme.linkHColor.hex + " !important;
 }
 /* Header */
-#header-bar, 
+#header-bar,
 a.current {
   color: " + $SS.theme.headerColor.hex + " !important;
 }
@@ -131,7 +131,7 @@ s:hover .quote,
   color: rgba(" + $SS.theme.textColor.rgb + ",.4) !important;
 }
 ::-webkit-input-placeholder {
-  color:rgba(" + $SS.theme.textColor.rgb + ",.4) !important;
+  color: rgba(" + $SS.theme.textColor.rgb + ",.4) !important;
 }
 #qr .field::-moz-placeholder,
 ::-moz-placeholder,
@@ -188,14 +188,14 @@ body.is_catalog .panel,
 .dd-menu li:hover,
 input[value='Next']:hover,
 input[value='Previous']:hover {
-  background:rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ");
+  background: rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ");
 }
 .focused.entry {
-  background:rgb\(" + $SS.theme.mainColor.shiftRGB(10) + ") !important;
+  background: rgb\(" + $SS.theme.mainColor.shiftRGB(10) + ") !important;
 }
 .qr-link:hover,
 :root.vertical-qr #qr .move {
-  background:rgb\(" + $SS.theme.mainColor.rgb + ");
+  background: rgb\(" + $SS.theme.mainColor.rgb + ");
 }
 input:not(.jsColor),
 textarea,
@@ -227,11 +227,11 @@ hr {
   background-image: linear-gradient(to left, rgba(" + $SS.theme.unreadColor.rgb + ",0), rgb(" + $SS.theme.unreadColor.rgb + "), rgba(" + $SS.theme.unreadColor.rgb + ",0));
 }
 .inline {
-  background:rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.8)!important;
+  background: rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.8)!important;
 }
 :root.post-info .reply>.postInfo {
   background: rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.2);
-  border-bottom:1px solid rgb\(" + $SS.theme.mainColor.shiftRGB(4) + ");
+  border-bottom: 1px solid rgb\(" + $SS.theme.mainColor.shiftRGB(4) + ");
 }
 /* Borders */
 .reply,
@@ -246,7 +246,7 @@ hr {
 }
 :root.borders-none .reply,
 :root.borders-none.op-background .postContainer.opContainer {
-  border: none;
+  border: 0;
 }
 #menu,
 .catalog-thumb {
@@ -376,11 +376,11 @@ select:focus,
   rgba(0,0,0,.6) 0 0 2px;
 }
 .thumb {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 5px rgba(0,0,0,.25);
 }
 #qr,
 #thread-watcher {
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 1px 1px 3px rgba(0,0,0,.1) !important;
 }
 /* Closed Threads */
 .closed {
