@@ -205,7 +205,7 @@ select,
 .captcha-root,
 #t-root {
   background: " + $SS.theme.inputColor.hex + " !important;
-  transition: background .2s, color .2s, border-color .2s !important;
+  transition: background .2s, color .2s, border-color .2s, width .2s !important;
 }
 input[type=checkbox],
 .riceCheck {
@@ -298,8 +298,6 @@ input,
 textarea,
 .riceCheck,
 #qr-filename-container,
-#search-box,
-#index-search,
 .captcha-img,
 :root.vertical-qr #qr .move,
 #qr select,
