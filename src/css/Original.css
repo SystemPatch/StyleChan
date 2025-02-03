@@ -197,6 +197,9 @@ input[value='Previous'] {
   top: 135px;
   right: 10px;
 }
+.identityIcon {
+  margin-bottom: -3px;
+}
 #ctrl-top {
   margin: 5px 0 5px 0;
 }
