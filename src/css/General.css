@@ -273,12 +273,17 @@ hr {
   opacity: 1;
 }
 /* Pages */
-.pages strong>a,
+.pages.cataloglink {
+  margin-left: 12px;
+}
+.pages.cataloglink a,
 input[value='Next'],
 input[value='Previous'] {
-  border-radius: 3px;
+  font-weight: 700;
+  transition: opacity .3s ease-in 0s;
 }
 .pages strong>a:hover,
+.pages.cataloglink a:hover,
 input[value='Next']:hover,
 input[value='Previous']:hover {
   opacity: .7;
@@ -293,6 +298,10 @@ input[value='Previous']:hover {
 .pages a {
   padding: 5px 10px;
   margin-left: -1px;
+}
+.pages strong>a {
+  padding-top: 3px;
+  transition: opacity .3s ease-in 0s;
 }
 .next,
 .prev {

@@ -6,6 +6,9 @@ div.boardBanner,
 #menu,
 input:not(.jsColor),
 textarea,
+a.summary,
+.pages.cataloglink a,
+.pages strong>a,
 #qr-filename-container,
 #post-preview,
 .post-last,
@@ -48,12 +51,6 @@ body.is_catalog .button,
 .options-button,
 .tegaki-tb-btn {
   color: " + $SS.theme.linkColor.hex + " !important;
-}
-a.summary,
-.pages strong>a,
-input[value='Next'],
-input[value='Previous'] {
-  color: " + $SS.theme.textColor.hex + " !important;
 }
 #header-bar #notifications a {
   color: #ffffff !important;
@@ -179,8 +176,10 @@ body.is_catalog .panel,
 .options-button,
 .qr-link,
 .pages.cataloglink,
-.pages strong>a {
-  background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + ")) !important;
+.pages strong>a,
+input[value='Next'],
+input[value='Previous'] {
+  background: linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + ")) !important;
 }
 .options-button:hover,
 .import-input:hover + .options-button,
@@ -197,7 +196,9 @@ input[value='Previous']:hover {
 :root.vertical-qr #qr .move {
   background: rgb\(" + $SS.theme.mainColor.rgb + ");
 }
-input:not(.jsColor),
+input[type=text]:not(.jsColor),
+input.field,
+#qr input,
 textarea,
 .riceCheck,
 #qr-filename-container,
@@ -211,7 +212,9 @@ input[type=checkbox],
 .riceCheck {
   background: rgb\(" + $SS.theme.inputColor.shiftRGB(25) + ") !important;
 }
-input:not(.jsColor):hover,
+input[type=text]:not(.jsColor):hover,
+input.field:hover,
+#qr input:hover,
 .riceCheck:hover,
 #qr-filename-container:hover,
 textarea:hover,
@@ -264,6 +267,10 @@ hr {
 :root.rounded-corners .fileThumb img:not(.full-image),
 :root.rounded-corners .catalog-thumb,
 :root.rounded-corners .dd-menu ul,
+:root.rounded-corners .pages.cataloglink,
+:root.rounded-corners .pages strong>a,
+:root.rounded-corners input[value='Next'],
+:root.rounded-corners input[value='Previous'],
 :root.rounded-corners.werkTyme .catalog-thread:not(:hover),
 :root.rounded-corners.werkTyme:not(.catalog-hover-expand) .catalog-thread,
 :root.rounded-corners.catalog-hover-expand .catalog-container:hover > .post,
@@ -326,7 +333,9 @@ input[value='Previous'] {
 a.quotelink.forwardlink, a.backlink.forwardlink {
   border-bottom: 1px dashed;
 }
-input:focus,
+input[type=text]:focus,
+input.field:focus,
+#qr input:focus,
 textarea:focus,
 #qr-filename-container:focus,
 #qr-filename-container.focus,
