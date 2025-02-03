@@ -106,27 +106,25 @@ body {
 :root.reply-fit-width .reply .container {
   padding-right: 5px;
 }
-:root.reply-fit-width.fit-postmenu .postInfo > .menu-button {
+:root.reply-fit-width.fit-postmenu .postInfo>.menu-button {
   float: right !important;
 }
 .menu-button + .container:not(:empty),
 .container {
   margin-left: 4px !important;
 }
-:root.reply-fit-width .post .menu-button {
+:root.reply-fit-width.fit-postmenu .post .menu-button {
   margin-left: 0;
   position: relative;
   left: 5px;
 }
-:root.reply-fit-width .post .menu-button {
+:root.reply-fit-width.fit-postmenu .post .menu-button {
   opacity: 0;
+  transition: opacity .3s ease-out 0s;
 }
-:root.reply-fit-width .post:not(:hover) .menu-button {
-  transition: opacity .3s ease-out 0s !important;
-}
-:root.reply-fit-width .post:hover .menu-button {
+:root.reply-fit-width.fit-postmenu .post:hover .menu-button {
   opacity: 1;
-  transition: opacity .3s ease-in .1s !important;
+  transition: opacity .3s ease-in .1s;
 }
 /* Code Tags */
 .prettyprint {
