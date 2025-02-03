@@ -20,6 +20,9 @@ body {
 .expanded-image {
   position: relative;
 }
+:root.op-background .op {
+  padding: 4px 0;
+}
 :root.force-indent .op {
   margin-left: -12px;
 }
@@ -28,9 +31,10 @@ body {
   content: '';
   display: block;
 }
-.thread>.replyContainer,
-.threadContainer>.replyContainer {
-  margin-bottom:" + $SS.conf["Margin Between Replies"] + "px !important;
+.thread>.replyContainer:not(.thread>.postContainer:last-of-type),
+.threadContainer>.replyContainer,
+:root.op-background .thread>.opContainer:not(.thread>.postContainer:last-of-type) {
+  margin-bottom: " + $SS.conf["Margin Between Replies"] + "px !important;
 }
 .inline {
   margin-left: 13px !important;
@@ -44,8 +48,30 @@ body {
 .postMessage {
   margin: " + $SS.conf["Margin Post Message"] + " !important;
 }
-.postContainer.opContainer {
-  margin: 0 !important;
+/* Index thread summary */
+:root.op-background:not(.float-summary) .summary:not(.summary-bottom, .preview-summary) {
+  display: block;
+  padding-top: " + (($SS.conf["Margin Between Replies"] < -2) ? (($SS.conf["Margin Between Replies"] * -1) - 3) : 0) + "px;
+  margin-top: " + (($SS.conf["Margin Between Replies"] > 0) ? (($SS.conf["Margin Between Replies"] * -1) + 1) : -3) + "px;
+}
+:root.op-background:not(.float-summary) body.board_vg .summary:last-of-type:not(.preview-summary),
+.summary-bottom {
+  display: block;
+  padding-top: 0;
+  margin-top: -3px;
+}
+:root.float-summary .summary:not(.preview-summary),
+:root.float-summary.op-background body.board_vg .summary:last-of-type:not(.summary-bottom, .preview-summary) {
+  margin-top: -" + (($SS.conf["Font Size"] < 13) ? 19 : ($SS.conf["Font Size"] + 6)) + "px;
+  float: right;
+  padding-right: 5px;
+  position: relative;
+}
+:root.float-summary.op-background .summary:not(.summary-bottom, .preview-summary) {
+  margin-top: " + (($SS.conf["Margin Between Replies"] <= 0) ? (($SS.conf["Margin Between Replies"] * -1) - (($SS.conf["Font Size"] < 13) ? 19 : ($SS.conf["Font Size"] + 6))) : -($SS.conf["Margin Between Replies"] + (($SS.conf["Font Size"] < 13) ? 15 : ($SS.conf["Font Size"] + 2)))) + "px;
+}
+:root.float-summary.bottom-backlinks body.is_index .op:not(#qp .op, .inline .op):has(.container:not(:empty)) {
+  padding-bottom: " + ($SS.conf["Font Size"] + 2) + "px;
 }
 /* Fit Expanded Images option */
 :root.fit-eximg.fit-height .full-image {
@@ -369,11 +395,14 @@ body.board_f #delform .fileText {
   opacity: 1;
 }
 /* Navlinks */
+#ctrl-top,
 body.is_index div.navLinks {
-  padding: 5px 0;
+  padding-top: 5px;
+  margin-bottom: 5px;
 }
 body.is_thread div.navLinks:not(.navLinksBot) {
-  padding: .4% 0 .4% 0;
+  padding-top: .4%;
+  margin-bottom: .4%;
 }
 .navLinks.navLinksBot.desktop {
   margin-bottom: 5px;

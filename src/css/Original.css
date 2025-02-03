@@ -200,9 +200,6 @@ input[value='Previous'] {
 .identityIcon {
   margin-bottom: -3px;
 }
-#ctrl-top {
-  margin: 5px 0 5px 0;
-}
 :root.isLight img[src*='//boards.4chan.org/js/jsMath/fonts/'] {
   filter: invert(100%);
   -webkit-filter: invert(100%);

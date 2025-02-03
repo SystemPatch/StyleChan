@@ -146,7 +146,7 @@ body.is_catalog .panel,
 #post-preview,
 #tegaki,
 .boxbar,
-:root.op-background .postContainer.opContainer,
+:root.op-background .op:not(.inline .op),
 .flashListing tr:nth-of-type(2n+1):not(.highlightPost),
 .dd-menu ul,
 :root.catalog-hover-expand .catalog-container:hover > .post {
@@ -238,25 +238,25 @@ hr {
 }
 /* Borders */
 .reply,
-:root.op-background .postContainer.opContainer,
+:root.op-background .op:not(#qp .op, .inline .op),
 .dd-menu ul {
   border-width: 0 1px 1px 0;
   border-style: solid;
 }
 :root.borders-all .reply,
-:root.borders-all.op-background .postContainer.opContainer {
+:root.borders-all.op-background .op {
   border-width: 1px !important;
 }
 :root.borders-none .reply,
-:root.borders-none.op-background .postContainer.opContainer {
-  border: 0;
+:root.borders-none.op-background .op {
+  border: 0 !important;
 }
 #menu,
 .catalog-thumb {
   border-radius: 0 !important;
 }
 :root.rounded-corners .reply,
-:root.rounded-corners.op-background .postContainer.opContainer,
+:root.rounded-corners.op-background .op,
 :root.rounded-corners .dialog:not(#header-bar),
 :root.rounded-corners .inline,
 :root.rounded-corners #thread-stats
@@ -286,7 +286,7 @@ hr {
   border-radius: 0 !important;
 }
 .reply,
-:root.op-background .postContainer.opContainer,
+:root.op-background .op,
 .dialog,
 .entry,
 .inline,
