@@ -6,6 +6,9 @@ div.boardBanner,
 #menu,
 input:not(.jsColor),
 textarea,
+a.summary,
+.pages.cataloglink a,
+.pages strong>a,
 #qr-filename-container,
 #post-preview,
 .post-last,
@@ -49,12 +52,6 @@ body.is_catalog .button,
 .tegaki-tb-btn {
   color: " + $SS.theme.linkColor.hex + " !important;
 }
-a.summary,
-.pages strong>a,
-input[value='Next'],
-input[value='Previous'] {
-  color: " + $SS.theme.textColor.hex + " !important;
-}
 #header-bar #notifications a {
   color: #ffffff !important;
 }
@@ -68,7 +65,7 @@ body.is_catalog .button:hover,
   color: " + $SS.theme.linkHColor.hex + " !important;
 }
 /* Header */
-#header-bar, 
+#header-bar,
 a.current {
   color: " + $SS.theme.headerColor.hex + " !important;
 }
@@ -112,7 +109,7 @@ s:hover .quote,
   text-shadow: none !important;
 }
 /* Backlinks */
-.backlink {
+.backlink, .backlink.deadlink {
   color: " + $SS.theme.blinkColor.hex + " !important;
 }
 :root.backlink-shadow .backlink {
@@ -131,7 +128,7 @@ s:hover .quote,
   color: rgba(" + $SS.theme.textColor.rgb + ",.4) !important;
 }
 ::-webkit-input-placeholder {
-  color:rgba(" + $SS.theme.textColor.rgb + ",.4) !important;
+  color: rgba(" + $SS.theme.textColor.rgb + ",.4) !important;
 }
 #qr .field::-moz-placeholder,
 ::-moz-placeholder,
@@ -149,7 +146,7 @@ body.is_catalog .panel,
 #post-preview,
 #tegaki,
 .boxbar,
-:root.op-background .postContainer.opContainer,
+:root.op-background .op:not(.inline .op),
 .flashListing tr:nth-of-type(2n+1):not(.highlightPost),
 .dd-menu ul,
 :root.catalog-hover-expand .catalog-container:hover > .post {
@@ -179,8 +176,10 @@ body.is_catalog .panel,
 .options-button,
 .qr-link,
 .pages.cataloglink,
-.pages strong>a {
-  background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + ")) !important;
+.pages strong>a,
+input[value='Next'],
+input[value='Previous'] {
+  background: linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + ")) !important;
 }
 .options-button:hover,
 .import-input:hover + .options-button,
@@ -188,16 +187,18 @@ body.is_catalog .panel,
 .dd-menu li:hover,
 input[value='Next']:hover,
 input[value='Previous']:hover {
-  background:rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ");
+  background: rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ");
 }
 .focused.entry {
-  background:rgb\(" + $SS.theme.mainColor.shiftRGB(10) + ") !important;
+  background: rgb\(" + $SS.theme.mainColor.shiftRGB(10) + ") !important;
 }
 .qr-link:hover,
 :root.vertical-qr #qr .move {
-  background:rgb\(" + $SS.theme.mainColor.rgb + ");
+  background: rgb\(" + $SS.theme.mainColor.rgb + ");
 }
-input:not(.jsColor),
+input[type=text]:not(.jsColor),
+input.field,
+#qr input,
 textarea,
 .riceCheck,
 #qr-filename-container,
@@ -205,13 +206,15 @@ select,
 .captcha-root,
 #t-root {
   background: " + $SS.theme.inputColor.hex + " !important;
-  transition: background .2s, color .2s, border-color .2s !important;
+  transition: background .2s, color .2s, border-color .2s, width .2s !important;
 }
 input[type=checkbox],
 .riceCheck {
   background: rgb\(" + $SS.theme.inputColor.shiftRGB(25) + ") !important;
 }
-input:not(.jsColor):hover,
+input[type=text]:not(.jsColor):hover,
+input.field:hover,
+#qr input:hover,
 .riceCheck:hover,
 #qr-filename-container:hover,
 textarea:hover,
@@ -227,33 +230,33 @@ hr {
   background-image: linear-gradient(to left, rgba(" + $SS.theme.unreadColor.rgb + ",0), rgb(" + $SS.theme.unreadColor.rgb + "), rgba(" + $SS.theme.unreadColor.rgb + ",0));
 }
 .inline {
-  background:rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.8)!important;
+  background: rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.8)!important;
 }
 :root.post-info .reply>.postInfo {
   background: rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.2);
-  border-bottom:1px solid rgb\(" + $SS.theme.mainColor.shiftRGB(4) + ");
+  border-bottom: 1px solid rgb\(" + $SS.theme.mainColor.shiftRGB(4) + ");
 }
 /* Borders */
 .reply,
-:root.op-background .postContainer.opContainer,
+:root.op-background .op:not(#qp .op, .inline .op),
 .dd-menu ul {
   border-width: 0 1px 1px 0;
   border-style: solid;
 }
 :root.borders-all .reply,
-:root.borders-all.op-background .postContainer.opContainer {
+:root.borders-all.op-background .op {
   border-width: 1px !important;
 }
 :root.borders-none .reply,
-:root.borders-none.op-background .postContainer.opContainer {
-  border: none;
+:root.borders-none.op-background .op {
+  border: 0 !important;
 }
 #menu,
 .catalog-thumb {
   border-radius: 0 !important;
 }
 :root.rounded-corners .reply,
-:root.rounded-corners.op-background .postContainer.opContainer,
+:root.rounded-corners.op-background .op,
 :root.rounded-corners .dialog:not(#header-bar),
 :root.rounded-corners .inline,
 :root.rounded-corners #thread-stats
@@ -264,6 +267,10 @@ hr {
 :root.rounded-corners .fileThumb img:not(.full-image),
 :root.rounded-corners .catalog-thumb,
 :root.rounded-corners .dd-menu ul,
+:root.rounded-corners .pages.cataloglink,
+:root.rounded-corners .pages strong>a,
+:root.rounded-corners input[value='Next'],
+:root.rounded-corners input[value='Previous'],
 :root.rounded-corners.werkTyme .catalog-thread:not(:hover),
 :root.rounded-corners.werkTyme:not(.catalog-hover-expand) .catalog-thread,
 :root.rounded-corners.catalog-hover-expand .catalog-container:hover > .post,
@@ -279,7 +286,7 @@ hr {
   border-radius: 0 !important;
 }
 .reply,
-:root.op-background .postContainer.opContainer,
+:root.op-background .op,
 .dialog,
 .entry,
 .inline,
@@ -298,8 +305,6 @@ input,
 textarea,
 .riceCheck,
 #qr-filename-container,
-#search-box,
-#index-search,
 .captcha-img,
 :root.vertical-qr #qr .move,
 #qr select,
@@ -328,7 +333,9 @@ input[value='Previous'] {
 a.quotelink.forwardlink, a.backlink.forwardlink {
   border-bottom: 1px dashed;
 }
-input:focus,
+input[type=text]:focus,
+input.field:focus,
+#qr input:focus,
 textarea:focus,
 #qr-filename-container:focus,
 #qr-filename-container.focus,
@@ -376,11 +383,11 @@ select:focus,
   rgba(0,0,0,.6) 0 0 2px;
 }
 .thumb {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 5px rgba(0,0,0,.25);
 }
 #qr,
 #thread-watcher {
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 1px 1px 3px rgba(0,0,0,.1) !important;
 }
 /* Closed Threads */
 .closed {

@@ -20,8 +20,8 @@ body {
 .expanded-image {
   position: relative;
 }
-div.post {
-  margin: 4px 0;
+:root.op-background .op {
+  padding: 4px 0;
 }
 :root.force-indent .op {
   margin-left: -12px;
@@ -31,9 +31,10 @@ div.post {
   content: '';
   display: block;
 }
-.thread>.replyContainer,
-.threadContainer>.replyContainer {
-  margin-bottom:" + $SS.conf["Margin Between Replies"] + "px !important;
+.thread>.replyContainer:not(.thread>.postContainer:last-of-type),
+.threadContainer>.replyContainer,
+:root.op-background .thread>.opContainer:not(.thread>.postContainer:last-of-type) {
+  margin-bottom: " + $SS.conf["Margin Between Replies"] + "px !important;
 }
 .inline {
   margin-left: 13px !important;
@@ -47,14 +48,36 @@ div.post {
 .postMessage {
   margin: " + $SS.conf["Margin Post Message"] + " !important;
 }
-.postContainer.opContainer {
-  margin: 0 !important;
+/* Index thread summary */
+:root.op-background:not(.float-summary) .summary:not(.summary-bottom, .preview-summary) {
+  display: block;
+  padding-top: " + (($SS.conf["Margin Between Replies"] < -2) ? (($SS.conf["Margin Between Replies"] * -1) - 3) : 0) + "px;
+  margin-top: " + (($SS.conf["Margin Between Replies"] > 0) ? (($SS.conf["Margin Between Replies"] * -1) + 1) : -3) + "px;
+}
+:root.op-background:not(.float-summary) body.board_vg .summary:last-of-type:not(.preview-summary),
+.summary-bottom {
+  display: block;
+  padding-top: 0;
+  margin-top: -3px;
+}
+:root.float-summary .summary:not(.preview-summary),
+:root.float-summary.op-background body.board_vg .summary:last-of-type:not(.summary-bottom, .preview-summary) {
+  margin-top: -" + (($SS.conf["Font Size"] < 13) ? 19 : ($SS.conf["Font Size"] + 6)) + "px;
+  float: right;
+  padding-right: 5px;
+  position: relative;
+}
+:root.float-summary.op-background .summary:not(.summary-bottom, .preview-summary) {
+  margin-top: " + (($SS.conf["Margin Between Replies"] <= 0) ? (($SS.conf["Margin Between Replies"] * -1) - (($SS.conf["Font Size"] < 13) ? 19 : ($SS.conf["Font Size"] + 6))) : -($SS.conf["Margin Between Replies"] + (($SS.conf["Font Size"] < 13) ? 15 : ($SS.conf["Font Size"] + 2)))) + "px;
+}
+:root.float-summary.bottom-backlinks body.is_index .thread:has(.summary) .op:not(#qp .op, .inline .op):has(.container:not(:empty)) {
+  padding-bottom: " + ($SS.conf["Font Size"] + 2) + "px;
 }
 :root.bottom-backlinks .container {
   padding: 0 0 4px 8px;
 }
 /* Fit Expanded Images option */
-:root.fit-eximg:root.fit-height .full-image {
+:root.fit-eximg.fit-height .full-image {
   max-height: calc(100vh - 8rem) !important;
 }
 /* Fit Width option */
@@ -112,27 +135,25 @@ div.post {
 :root.reply-fit-width .reply .container {
   padding-right: 5px;
 }
-:root.reply-fit-width.fit-postmenu .postInfo > .menu-button {
+:root.reply-fit-width.fit-postmenu .postInfo>.menu-button {
   float: right !important;
 }
 .menu-button + .container:not(:empty),
 .container {
   margin-left: 4px !important;
 }
-:root.reply-fit-width .post .menu-button {
+:root.reply-fit-width.fit-postmenu .post .menu-button {
   margin-left: 0;
   position: relative;
   left: 5px;
 }
-:root.reply-fit-width .post .menu-button {
+:root.reply-fit-width.fit-postmenu .post .menu-button {
   opacity: 0;
+  transition: opacity .3s ease-out 0s;
 }
-:root.reply-fit-width .post:not(:hover) .menu-button {
-  transition: opacity .3s ease-out 0s !important;
-}
-:root.reply-fit-width .post:hover .menu-button {
+:root.reply-fit-width.fit-postmenu .post:hover .menu-button {
   opacity: 1;
-  transition: opacity .3s ease-in .1s !important;
+  transition: opacity .3s ease-in .1s;
 }
 /* Code Tags */
 .prettyprint {
@@ -213,8 +234,7 @@ input[type=checkbox]:checked+.riceCheck::before {
   margin-left: 2px;
 }
 :root.fixed:not(.autohide):not(.bottom) #globalMessage {
-  margin-top: 10px !important;
-  margin-bottom: 20px !important;
+  margin: 10px 0 20px !important;
 }
 .globalMessage, h2, h3 {
   margin: auto;
@@ -245,8 +265,9 @@ hr {
   width: 100%;
 }
 #unread-line {
-  margin-top: -3px !important;
-  margin-bottom: -3px !important;
+  margin-top: " + (($SS.conf["Margin Between Replies"] < -2) ? ($SS.conf["Margin Between Replies"] - 1) : -3) + "px !important;
+  margin-bottom: " + (($SS.conf["Margin Between Replies"] < -2) ? -5 : -3) + "px !important;
+  position: relative;
 }
 /* Scroll Marker */
 :root:not(.autohide) #scroll-marker {
@@ -254,8 +275,8 @@ hr {
 }
 /* Board Title */
 .boardBanner .boardTitle {
-  cursor:default;
-  letter-spacing:-2px;
+  cursor: default;
+  letter-spacing: -2px;
   padding-top: .1em;
 }
 /* Banner */
@@ -278,20 +299,23 @@ hr {
   transition: opacity .3s ease-out 0s;
 }
 :root.banner-opacity #bannerCnt:hover {
-  opacity: 1.0 !important;
-  transition: opacity .3s ease-in 0s;
+  opacity: 1;
 }
 /* Pages */
-.pages strong>a,
+.pages.cataloglink {
+  margin-left: 12px;
+}
+.pages.cataloglink a,
 input[value='Next'],
 input[value='Previous'] {
-  border-radius: 3px;
+  font-weight: 700;
+  transition: opacity .3s ease-in 0s;
 }
 .pages strong>a:hover,
+.pages.cataloglink a:hover,
 input[value='Next']:hover,
 input[value='Previous']:hover {
-  opacity: .7 !important;
-  transition: opacity .3s ease-in 0s;
+  opacity: .7;
 }
 .pagelist {
   margin-left: 18px;
@@ -303,6 +327,10 @@ input[value='Previous']:hover {
 .pages a {
   padding: 5px 10px;
   margin-left: -1px;
+}
+.pages strong>a {
+  padding-top: 3px;
+  transition: opacity .3s ease-in 0s;
 }
 .next,
 .prev {
@@ -367,15 +395,17 @@ body.board_f #delform .fileText {
 }
 :root.ad-opacity .center img:hover,
 :root.ad-opacity .danbo-slot:hover {
-  opacity: 1.0 !important;
-  transition: opacity .3s ease-in 0s;
+  opacity: 1;
 }
 /* Navlinks */
+#ctrl-top,
 body.is_index div.navLinks {
-  padding: 5px 0;
+  padding-top: 5px;
+  margin-bottom: 5px;
 }
 body.is_thread div.navLinks:not(.navLinksBot) {
-  padding: .4% 0 .4% 0;
+  padding-top: .4%;
+  margin-bottom: .4%;
 }
 .navLinks.navLinksBot.desktop {
   margin-bottom: 5px;
@@ -399,7 +429,7 @@ body.is_thread div.navLinks:not(.navLinksBot) {
   transition: opacity .3s ease-out 0s;
 }
 :root.thumb-opacity .fileThumb img:not(.full-image):hover {
-  opacity: 1.0;
+  opacity: 1;
 }
 /* Selection Lists */
 select {
