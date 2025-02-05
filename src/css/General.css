@@ -50,6 +50,9 @@ div.post {
 .postContainer.opContainer {
   margin: 0 !important;
 }
+:root.bottom-backlinks .container {
+  padding: 0 0 4px 8px;
+}
 /* Fit Expanded Images option */
 :root.fit-eximg:root.fit-height .full-image {
   max-height: calc(100vh - 8rem) !important;
