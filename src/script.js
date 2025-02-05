@@ -868,9 +868,9 @@
                 }
                 // 4chan Pass Link
                 if ($SS.conf["Show 4chan Pass Login"]) {
-                    const link = $("<span class='brackets-wrap pass-link-container pass-login'><a title='4chan Pass login' href='javascript:;'>4chan Pass</a></span>").bind("click", function(event) {
+                    const link = $("<span class='brackets-wrap pass-link-container pass-login'><a title='4chan Pass login' href='javascript:;'>4chan Pass</a></span>").bind("click", function(e) {
                         // Prevent the default link behavior
-                        event.preventDefault();
+                        e.preventDefault();
                         // Open the link in a new window with custom size
                         window.open('https://sys.4chan.org/auth', '_blank', 'width=502,height=346')
                     });

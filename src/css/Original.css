@@ -207,6 +207,9 @@ input[value='Previous'] {
   filter: invert(100%);
   -webkit-filter: invert(100%);
 }
+:root.reply-fit-width .inline {
+  display: flow-root !important;
+}
 /* Accommodate StyleChan icon in header */
 :root.centered-links #shortcuts {
   width: 30vw !important;
