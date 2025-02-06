@@ -54,16 +54,10 @@
 :root.backlink-icon .backlink.inlined:hover {
   opacity: 1 !important;
 }
-/*Add icon to posts with replies when using 4chan X's Bottom Backlinks setting*/
+/* Bottom backlinks mark*/
 :root.bottom-backlinks.bottom-bl-icon .post:has(>.container:not(:empty))>.postInfo::after {
-  content: '';
-  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.bubble + "\");
-  display: inline-block;
-  width: " + $SS.conf["Font Size"] + "px;
-  height: " + $SS.conf["Font Size"] + "px;
-  margin: -1px 0;
-}
-:root.bottom-backlinks.bottom-bl-icon.reply-fit-width.fit-postmenu .post:has(>.container:not(:empty))>.postInfo::after {
+  content: '●';
+  font-size: " + $SS.conf["Font Size"] + "px;
   margin-left: 4px;
 }
 /* From 4chanSS */
