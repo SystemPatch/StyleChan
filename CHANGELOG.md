@@ -1,3 +1,19 @@
+### v1.0.33
+*2025-02-21*
+
+- Inlined replies will now make a better use of space when Fit Width is enabled
+
+**PR by @SystemPatch:**
+- OP is now affected by Margin Between Replies when OP Background is enabled.
+- Make the thread unread line more adaptable to when Margin Between Replies is set to None or Overlapping Borders. Unread line will now overlap the post borders instead of pushing apart the posts.
+- Finish styling native index nav buttons. Index buttons added to rounded corners option.
+
+Fixes:
+- Add .identityIcon.
+- Dead backlink becoming uncolored in XT.
+- Add width to input transitions. This fixes the search boxes on the index not having the expanding animation.
+- Remove the search box IDs from border color styling. This fixes the search boxes not having their focus border.
+
 ### v1.0.32
 *2025-01-16*
 
