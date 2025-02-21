@@ -54,12 +54,6 @@
 :root.backlink-icon .backlink.inlined:hover {
   opacity: 1 !important;
 }
-/* Bottom backlinks mark*/
-:root.bottom-backlinks.bottom-bl-icon .post:has(>.container:not(:empty))>.postInfo::after {
-  content: '●';
-  font-size: " + $SS.conf["Font Size"] + "px;
-  margin-left: 4px;
-}
 /* From 4chanSS */
 img[title=Closed],
 img[title=Sticky],

@@ -109,7 +109,6 @@
             "Reduce Thumbnail Opacity": [false, "Reduces opacity of thumbnails."],
             "Backlink Icons": [false, "Use icons for backlinks instead of text."],
             "Backlink Shadow": [false, "Add a shadow to the backlink text."],
-            "Mark Posts With Bottom Backlinks": [false, "When using 4chan X's Bottom Backlinks, add an indicator when a post is quoted."],
             "Borders": [
                 2, "Changes which sides of replies have borders.", [{
                     name: "Normal (4chan default)",
@@ -2593,7 +2592,6 @@
                 $("html").optionClass("Invert Spoiler", true, "alt-spoiler");
                 $("html").optionClass("Backlink Icons", true, "backlink-icon");
                 $("html").optionClass("Backlink Shadow", true, "backlink-shadow");
-                $("html").optionClass("Mark Posts With Bottom Backlinks", true, "bottom-bl-icon");
                 $("html").optionClass("Show 4chan Pass Users", true, "no-pu");
                 $("html").optionClass("Show 4chan Pass Login", true, "pass-login");
                 $("html").optionClass("Fit Expanded Images", true, "fit-eximg");
